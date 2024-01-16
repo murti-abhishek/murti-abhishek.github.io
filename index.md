@@ -70,7 +70,7 @@ var fun = function lang(l) {
 
 ### Large image
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![Me](/img/photo.HEIC)
 
 
 ### Definition lists can be used with HTML syntax.
