@@ -70,7 +70,7 @@ var fun = function lang(l) {
 
 ### Large image
 
-![Me](/img/photo.HEIC)
+![Me](https://github.com/murti-abhishek/murti-abhishek.github.io/blob/main/img/photo.HEIC)
 
 
 ### Definition lists can be used with HTML syntax.
