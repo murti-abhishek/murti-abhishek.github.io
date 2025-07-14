@@ -39,13 +39,9 @@ Developed a lightweight Julia package for analyzing single-cell transcriptomics 
 
 # Contact
 
-- 📧 [abhishekmurti@gmail.com](mailto:abhishekmurti@gmail.com)  
+- 📧 [abhishekmurti@gmail.com](mailto:murtiabhishek@gmail.com)  
 - 💼 [LinkedIn](https://linkedin.com/in/abhishek-murti)  
 - 💻 [GitHub](https://github.com/murti-abhishek)  
-
----
-
-![Photo of Abhishek](https://github.com/murti-abhishek/murti-abhishek.github.io/img/photo.png)
 
 
 # Codeblocks
