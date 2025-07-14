@@ -32,17 +32,20 @@ Characterizing periportal hepatocyte damage and immune interactions using snRNA-
 ### 🧠 AI Scientist Prototype  
 Building a prototype LLM-powered agent that generates mechanistic hypotheses from tumor transcriptomics data using gene signatures, clustering, and literature context.
 
+### 📦 Julia Package for Single-Cell Analysis
+Developed a lightweight Julia package for analyzing single-cell transcriptomics data. The toolkit includes functionality for clustering, dimensionality reduction, visualization, and marker gene identification — inspired by Scanpy and Seurat, but designed for high performance and flexibility in Julia.
+
 ---
 
 # Contact
 
 - 📧 [abhishekmurti@gmail.com](mailto:abhishekmurti@gmail.com)  
 - 💼 [LinkedIn](https://linkedin.com/in/abhishek-murti)  
-- 💻 [GitHub](https://github.com/amurti)  
+- 💻 [GitHub](https://github.com/murti-abhishek)  
 
 ---
 
-![Photo of Abhishek](https://github.com/murti-abhishek/murti-abhishek.github.io/blob/main/img/photo.png)
+![Photo of Abhishek](https://github.com/murti-abhishek/murti-abhishek.github.io/img/photo.png)
 
 
 # Codeblocks
