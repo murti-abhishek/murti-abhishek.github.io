@@ -4,17 +4,46 @@ layout: default
 
 # About Me
 
-Bonjour! My name is Abhishek Murti. I pursued my Bachelor's degree from BITS, Pilani in India, and then obtained my Master's degree from Cornell University, Ithaca, NY, in Chemical and Biomolecular Engineering. Due to limited  hand-eye coordination and a lack of interest in wet lab work, I've always gravitated towards computational work. Back in undergrad, it used to be Computational Fluid Dynamics (CFD), but during my Master's (and ever since), it has been Computational Biology. My Master's thesis was focused on developing ODE and constraint-based mathematical models in cell-free systems, a systems biology approach to solving biological problems.
+# About Me
 
-I currently work as a data scientist/bioinformatician at the University of California, San Francisco. Our research focus is on comprehending the molecular and cellular mechanisms responsible for maintaining the liver under varying health and disease conditions. My role involves transforming sequencing data, with a predominant emphasis on single-cell, single-nuclei, and spatial transcriptomics data, into meaningful mathematical representations. Additionally, I am involved in implementing and developing bioinformatic pipelines for downstream analysis.
+Hi, I’m **Abhishek Murti** — a computational biologist with a background in Chemical and Biomolecular Engineering. I completed my undergraduate degree at BITS Pilani (India) and my Master's at Cornell University in Ithaca, NY, where I transitioned from computational fluid dynamics (CFD) to computational biology.
 
-[Here's me on Strava](https://www.strava.com/athletes/84323856)
+My Master's thesis focused on systems biology, specifically developing ODE-based and constraint-based mathematical models of cell-free systems. Since then, I’ve remained deeply engaged in computational work, particularly in high-dimensional transcriptomics.
+
+I currently work as a **bioinformatician at the University of California, San Francisco (UCSF)**. My work centers on:
+- Single-cell and single-nuclei RNA sequencing
+- Spatial transcriptomics
+- Multi-omics data integration
+
+I build scalable bioinformatics pipelines and develop computational tools to help uncover the molecular and cellular mechanisms driving liver health and disease, from autoimmune hepatitis to pediatric liver cancer.
+
+[Find me on Strava 🏃‍♂️](https://www.strava.com/athletes/84323856)
+
+---
 
 # Projects
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+### 🔬 Hepatoblastoma Tumor Atlas  
+Developing single-cell and single-nuclei atlases from fresh and frozen tumor samples to identify distinct tumor subtypes and transcriptional programs driving heterogeneity in high-risk pediatric liver cancer.
+
+### 🧬 Autoimmune Hepatitis (AIH)  
+Characterizing periportal hepatocyte damage and immune interactions using snRNA-seq of human liver biopsies. Identified potential autoantigens and CD40/CD40L signaling axes driving pathology.
+
+### 🧠 AI Scientist Prototype  
+Building a prototype LLM-powered agent that generates mechanistic hypotheses from tumor transcriptomics data using gene signatures, clustering, and literature context.
+
+---
+
+# Contact
+
+- 📧 [abhishekmurti@gmail.com](mailto:abhishekmurti@gmail.com)  
+- 💼 [LinkedIn](https://linkedin.com/in/abhishek-murti)  
+- 💻 [GitHub](https://github.com/amurti)  
+
+---
+
+![Photo of Abhishek](https://github.com/murti-abhishek/murti-abhishek.github.io/blob/main/img/photo.png)
+
 
 # Codeblocks
 
