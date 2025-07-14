@@ -70,5 +70,5 @@ Characterizing periportal hepatocyte damage and immune interactions using snRNA-
 
 ### Large image
 
-![Me](https://github.com/murti-abhishek/murti-abhishek.github.io/img/photo.png)
+![Me](https://github.com/murti-abhishek/murti-abhishek.github.io/tree/main/img/photo.png)
 
