@@ -21,10 +21,12 @@ I build scalable bioinformatics pipelines and develop computational tools to hel
 
 # Personal Projects
 
-### 📦 Julia Package for Single-Cell Analysis
+### 📦 Julia Package for Single-Cell Analysis 
+[🔗 View on GitHub](https://github.com/murti-abhishek/scAM.jl)
 Developed a lightweight Julia package for analyzing single-cell transcriptomics data. The toolkit includes functionality for clustering, dimensionality reduction, visualization, and marker gene identification — inspired by Scanpy and Seurat, but designed for high performance and flexibility in Julia.
 
 ### 🧠 AI Scientist Prototype  
+[🔗 View on GitHub](https://github.com/murti-abhishek/sc-ai-hb)
 Building a prototype LLM-powered agent that generates mechanistic hypotheses from tumor transcriptomics data using gene signatures, clustering, and literature context.
 
 ---
