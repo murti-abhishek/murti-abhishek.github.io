@@ -21,21 +21,21 @@ I build scalable bioinformatics pipelines and develop computational tools to hel
 
 # Personal Projects
 
-### 📦 Julia Package for Single-Cell Analysis 
-[🔗 View on GitHub](https://github.com/murti-abhishek/scAM.jl)
+### Julia Package for Single-Cell Analysis 
 Developed a lightweight Julia package for analyzing single-cell transcriptomics data. The toolkit includes functionality for clustering, dimensionality reduction, visualization, and marker gene identification — inspired by Scanpy and Seurat, but designed for high performance and flexibility in Julia.
+[View on GitHub](https://github.com/murti-abhishek/scAM.jl)
 
-### 🧠 AI Scientist Prototype  
-[🔗 View on GitHub](https://github.com/murti-abhishek/sc-ai-hb)
+### AI Scientist Prototype  
 Building a prototype LLM-powered agent that generates mechanistic hypotheses from tumor transcriptomics data using gene signatures, clustering, and literature context.
+[View on GitHub](https://github.com/murti-abhishek/sc-ai-hb)
 
 ---
 
 # UCSF Projects
-### 🔬 Hepatoblastoma Tumor Atlas  
+### Hepatoblastoma Tumor Atlas  
 Developing single-cell and single-nuclei atlases from fresh and frozen tumor samples to identify distinct tumor subtypes and transcriptional programs driving heterogeneity in high-risk pediatric liver cancer.
 
-### 🧬 Autoimmune Hepatitis (AIH)  
+### Autoimmune Hepatitis (AIH)  
 Characterizing periportal hepatocyte damage and immune interactions using snRNA-seq of human liver biopsies. Identified potential autoantigens and CD40/CD40L signaling axes driving pathology.
 
 ---
@@ -66,11 +66,6 @@ Characterizing periportal hepatocyte damage and immune interactions using snRNA-
 
 # Contact
 
-- 📧 [abhishekmurti@gmail.com](mailto:murtiabhishek@gmail.com)  
-- 💼 [LinkedIn](https://linkedin.com/in/abhishek-murti)  
-- 💻 [GitHub](https://github.com/murti-abhishek)  
-
-### Large image
-
-![Me](https://github.com/murti-abhishek/murti-abhishek.github.io/tree/main/img/photo.png)
-
+- [abhishekmurti@gmail.com](mailto:murtiabhishek@gmail.com)  
+- [LinkedIn](https://linkedin.com/in/abhishek-murti)  
+- [GitHub](https://github.com/murti-abhishek) 
