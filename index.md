@@ -3,9 +3,11 @@ layout: default
 ---
 
 <link rel="stylesheet" href="/assets/style.css">
+
 <div class="toggle-container">
   <button class="toggle-button" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
 </div>
+
 <script>
   const toggleDarkMode = () => {
     document.body.classList.toggle('dark-mode');
@@ -17,7 +19,6 @@ layout: default
     }
   };
 </script>
-
 
 # About Me
 
