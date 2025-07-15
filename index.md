@@ -39,6 +39,13 @@ I build scalable bioinformatics pipelines and develop computational tools to hel
 
 [Find me on Strava 🏃‍♂️](https://www.strava.com/athletes/84323856)
 
+[Find me on Strava 🏃‍♂️](https://www.strava.com/athletes/84323856)
+
+<p align="center">
+  <img src="/img/strava_heatmap.png" alt="Strava Heatmap" width="600">
+</p>
+
+
 ---
 
 # Personal Projects
