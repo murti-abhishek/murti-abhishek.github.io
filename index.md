@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="/assets/style.css">
+
 # About Me
 
 Hi, I’m **Abhishek Murti** — a computational biologist with a background in Chemical and Biomolecular Engineering. I completed my undergraduate degree at BITS Pilani (India) and my Master's at Cornell University in Ithaca, NY, where I transitioned from computational fluid dynamics (CFD) to computational biology.
