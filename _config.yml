@@ -2,3 +2,6 @@ title: Abhishek Murti
 description: Computational biologist | UCSF
 theme: jekyll-theme-minimal
 show_downloads: true
+
+include:
+  - _includes/sidebar.html
