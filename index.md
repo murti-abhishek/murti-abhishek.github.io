@@ -22,10 +22,6 @@ layout: default
 
 # About Me
 
-<p align="center">
-  <img src="/img/photo.png" alt="Photo of Abhishek Murti" width="180">
-</p>
-
 Hi, I’m **Abhishek Murti** — a computational biologist with a background in Chemical and Biomolecular Engineering. I completed my undergraduate degree at BITS Pilani (India) and my Master's at Cornell University in Ithaca, NY, where I transitioned from computational fluid dynamics (CFD) to computational biology.
 
 My Master's thesis focused on systems biology, specifically developing ODE-based and constraint-based mathematical models of cell-free systems. Since then, I’ve remained deeply engaged in computational work, particularly in high-dimensional transcriptomics.
@@ -38,10 +34,6 @@ I currently work as a **bioinformatician at the University of California, San Fr
 I build scalable bioinformatics pipelines and develop computational tools to help uncover the molecular and cellular mechanisms driving liver health and disease, from autoimmune hepatitis to pediatric liver cancer.
 
 [Find me on Strava 🏃‍♂️](https://www.strava.com/athletes/84323856)
-
-<p align="center">
-  <img src="/img/strava_heatmap.png" alt="Strava Heatmap" width="600">
-</p>
 
 ---
 
