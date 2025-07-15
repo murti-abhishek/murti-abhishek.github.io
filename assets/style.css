@@ -26,11 +26,13 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Headings */
 h1, h2, h3, h4 {
   color: var(--accent);
   margin-top: 2rem;
 }
 
+/* Links */
 a {
   color: var(--link);
   text-decoration: none;
@@ -41,12 +43,14 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Images */
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
+/* Code blocks */
 pre, code {
   background: #f5f5f5;
   padding: 0.2rem 0.4rem;
@@ -57,6 +61,27 @@ pre, code {
 
 body.dark-mode pre, body.dark-mode code {
   background: #1f1f1f;
+}
+
+/* Emphasis (bold + italic) */
+strong, b {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+body.dark-mode strong,
+body.dark-mode b {
+  color: #ffffff;
+}
+
+em, i {
+  color: var(--fg);
+  font-style: italic;
+}
+
+body.dark-mode em,
+body.dark-mode i {
+  color: #dddddd;
 }
 
 /* Toggle Button */
