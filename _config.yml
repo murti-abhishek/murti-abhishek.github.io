@@ -1,7 +1,17 @@
-title: Abhishek Murti
-description: Computational biologist | UCSF
-theme: jekyll-theme-minimal
-show_downloads: true
+# title: Abhishek Murti
+# description: Computational biologist | UCSF
+# theme: jekyll-theme-minimal
+# show_downloads: true
 
-include:
-  - _includes/sidebar.html
+# include:
+#   - _includes/sidebar.html
+title: Abhishek Murti
+description: This is where my projects (and I) live
+author:
+  name: Abhishek Murti
+  email: murtiabhishek@gmail.com
+url: "https://murti-abhishek.github.io"
+baseurl: ""
+theme: jekyll-theme-hyde
+plugins:
+  - jekyll-feed
