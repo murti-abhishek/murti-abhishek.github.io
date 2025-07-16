@@ -5,39 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
-  
-  <!-- Include minimal theme CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-  
-  <!-- Your dark mode CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}" />
-  
-  <!-- Any other head includes -->
+
+  <!-- Base and dark mode styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
+
   {{ content_for_head }}
 </head>
 <body>
-  <!-- Dark mode toggle button -->
+  <!-- Dark mode toggle -->
   <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
-    🌙
+    Toggle Dark Mode 🌙
   </button>
 
-  <!-- Your page content -->
+  <!-- Main content -->
   <main>
     {{ content }}
   </main>
 
-  <!-- Dark mode toggle script -->
+  <!-- Toggle script -->
   <script>
     const toggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Set dark mode based on system preference if no stored preference
-    if (!localStorage.getItem('dark-mode')) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('dark-mode', 'enabled');
-      }
-    } else if (localStorage.getItem('dark-mode') === 'enabled') {
+    // Load saved preference or match system setting
+    const saved = localStorage.getItem('dark-mode');
+    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (saved === 'enabled' || (!saved && systemPrefersDark)) {
       body.classList.add('dark-mode');
     }
 
