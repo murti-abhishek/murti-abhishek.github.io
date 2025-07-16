@@ -59,11 +59,3 @@ Characterizing periportal hepatocyte damage and immune interactions using snRNA-
 - **Tabula Sapiens reveals transcription factor expression, senescence effects, and sex-specific features in cell types from 28 human organs and tissues**  
   *bioRxiv*, 2024  
   [bioRxiv](https://doi.org/10.1101/2024.12.03.626516)  
-
----
-
-# Contact
-
-- [abhishekmurti@gmail.com](mailto:murtiabhishek@gmail.com)  
-- [LinkedIn](https://linkedin.com/in/abhishek-murti)  
-- [GitHub](https://github.com/murti-abhishek) 
