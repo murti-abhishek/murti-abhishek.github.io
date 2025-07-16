@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  
+  <!-- Include minimal theme CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  
+  <!-- Your dark mode CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}" />
+  
+  <!-- Any other head includes -->
+  {{ content_for_head }}
+</head>
+<body>
+  <!-- Dark mode toggle button -->
+  <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
+    🌙
+  </button>
+
+  <!-- Your page content -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Set dark mode based on system preference if no stored preference
+    if (!localStorage.getItem('dark-mode')) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+      }
+    } else if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  </script>
+</body>
+</html>
