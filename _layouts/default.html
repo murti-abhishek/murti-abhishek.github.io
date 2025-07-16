@@ -6,44 +6,54 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
 
-  <!-- Base and dark mode styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
-
-  {{ content_for_head }}
 </head>
 <body>
-  <!-- Dark mode toggle -->
-  <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000; background: none; border: none; font-size: 1.5rem; cursor: pointer;">
-    🌙
-  </button>
 
-  <!-- Main content -->
-  <main>
-    {{ content }}
-  </main>
+  <!-- Dark Mode Toggle Button -->
+  <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"
+    style="position: fixed; top: 1rem; right: 1rem; font-size: 1.5rem;">🌙</button>
 
-  <!-- Toggle script -->
+  <!-- Layout Container -->
+  <div class="layout-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:murtiabhishek@gmail.com">Email</a></li>
+        <li><a href="https://github.com/murti-abhishek" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/abhishek-murti" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.strava.com/athletes/84323856" target="_blank">Strava</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+  </div>
+
+  <!-- Dark Mode Toggle Script -->
   <script>
     const toggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Load saved preference or match system setting
-    const saved = localStorage.getItem('dark-mode');
-    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const stored = localStorage.getItem('dark-mode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (saved === 'enabled' || (!saved && systemPrefersDark)) {
+    if (stored === 'enabled' || (!stored && prefersDark)) {
       body.classList.add('dark-mode');
     }
 
     toggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-      }
+      localStorage.setItem('dark-mode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
     });
   </script>
+
 </body>
 </html>
