@@ -1,17 +1,4 @@
 title: Abhishek Murti
-description: This is where my projects (and I) live
-author:
-  name: Abhishek Murti
-  email: murtiabhishek@gmail.com
-url: "https://murti-abhishek.github.io"
-baseurl: ""
-remote_theme: poole/hyde
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
-
-# title: Abhishek Murti
-# description: Computational biologist | UCSF
-# theme: jekyll-theme-minimal
-# show_downloads: true
+description: Computational Biologist | San Francisco
+theme: jekyll-theme-minimal
+show_downloads: true
