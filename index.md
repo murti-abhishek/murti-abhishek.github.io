@@ -15,8 +15,6 @@ I currently work as a **bioinformatician at the University of California, San Fr
 
 I build scalable bioinformatics pipelines and develop computational tools to help uncover the molecular and cellular mechanisms driving liver health and disease, from autoimmune hepatitis to pediatric liver cancer.
 
-[Find me on Strava 🏃‍♂️](https://www.strava.com/athletes/84323856)
-
 ---
 
 # Personal Projects
