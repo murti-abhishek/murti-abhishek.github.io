@@ -1,12 +1,14 @@
 title: Abhishek Murti
-description: Computational Biologist | San Francisco
+description: This is where my projects (and I) live
 author:
   name: Abhishek Murti
   email: murtiabhishek@gmail.com
 url: "https://murti-abhishek.github.io"
 baseurl: ""
-theme: jekyll-theme-hyde
+remote_theme: poole/hyde
+
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 # title: Abhishek Murti
