@@ -5,7 +5,7 @@ body.dark-mode {
   color: #f0f0f0 !important;
 }
 
-/* Headings */
+/* Headings — force override */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -13,6 +13,14 @@ body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6 {
   color: #ffffff !important;
+}
+
+/* Paragraphs, spans, and generic text */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode div,
+body.dark-mode span {
+  color: #f0f0f0 !important;
 }
 
 /* Links */
@@ -23,14 +31,19 @@ body.dark-mode a:hover {
   color: #89caff !important;
 }
 
-/* Code */
+/* Code blocks */
 body.dark-mode pre,
 body.dark-mode code {
   background-color: #1e1e1e !important;
   color: #f0f0f0 !important;
 }
 
-/* Horizontal rules (optional) */
+/* Horizontal rule */
 body.dark-mode hr {
   border-top: 1px solid #444 !important;
+}
+
+/* Optional: dark mode toggle button contrast */
+body.dark-mode #dark-mode-toggle {
+  color: #ccc !important;
 }
