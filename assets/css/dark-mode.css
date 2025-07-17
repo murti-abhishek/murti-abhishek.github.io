@@ -1,34 +1,21 @@
-body.dark-mode {
+body.dark {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
-body.dark-mode .sidebar {
+body.dark header {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark .sidebar {
   background-color: #1e1e1e;
+}
+
+body.dark .sidebar h2 {
   color: #ffffff;
 }
 
-body.dark-mode .sidebar h2 {
-  color: #ffffff;
-}
-
-body.dark-mode .sidebar a {
-  color: #90caf9;
-}
-
-body.dark-mode .sidebar a:hover {
-  color: #ffffff;
-}
-
-body.dark-mode .content {
-  color: #e0e0e0;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
+body.dark .sidebar a {
   color: #ffffff;
 }
