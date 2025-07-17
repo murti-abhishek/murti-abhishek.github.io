@@ -14,7 +14,7 @@ body.dark-mode h6 {
   color: #ffffff !important;
 }
 
-/* Paragraphs and text */
+/* Text */
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode div,
@@ -30,30 +30,30 @@ body.dark-mode a:hover {
   color: #89caff !important;
 }
 
-/* Code blocks */
+/* Code */
 body.dark-mode pre,
 body.dark-mode code {
   background-color: #1e1e1e !important;
   color: #f0f0f0 !important;
 }
 
-/* Horizontal rule */
+/* HR */
 body.dark-mode hr {
   border-top: 1px solid #444 !important;
 }
 
 /* Sidebar */
 body.dark-mode .sidebar {
-  background-color: #1e1e1e !important;
+  background-color: #000000 !important;
 }
 
 body.dark-mode .sidebar h2,
-body.dark-mode .sidebar li,
+body.dark-mode .sidebar ul,
 body.dark-mode .sidebar a {
   color: #f0f0f0 !important;
 }
 
-/* Toggle Button Contrast */
+/* Toggle Button */
 body.dark-mode #dark-mode-toggle {
   color: #ccc !important;
 }

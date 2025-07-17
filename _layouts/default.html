@@ -6,6 +6,9 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
@@ -23,12 +26,21 @@
     <aside class="sidebar">
       <h2>Contact</h2>
       <ul>
-        <li><a href="mailto:murtiabhishek@gmail.com">Email</a></li>
-        <li><a href="https://github.com/murti-abhishek" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/abhishek-murti" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.strava.com/athletes/84323856" target="_blank">Strava</a></li>
+        <li>
+          <a href="mailto:murtiabhishek@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </li>
+        <li>
+          <a href="https://github.com/murti-abhishek" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/abhishek-murti" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://www.strava.com/athletes/84323856" target="_blank"><i class="fas fa-running"></i> Strava</a>
+        </li>
       </ul>
     </aside>
+
 
     <!-- Main Content -->
     <main class="main-content">
