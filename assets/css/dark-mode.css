@@ -1,6 +1,6 @@
 body.dark-mode {
   background-color: #121212;
-  color: #f1f1f1;
+  color: #e0e0e0;
 }
 
 body.dark-mode .sidebar {
@@ -8,19 +8,22 @@ body.dark-mode .sidebar {
   color: #ffffff;
 }
 
-body.dark-mode .sidebar a {
+body.dark-mode .sidebar h2 {
   color: #ffffff;
 }
 
-body.dark-mode .sidebar a:hover {
+body.dark-mode .sidebar a {
   color: #90caf9;
 }
 
-body.dark-mode .content {
-  color: #f1f1f1;
+body.dark-mode .sidebar a:hover {
+  color: #ffffff;
 }
 
-/* Ensure headings are visible */
+body.dark-mode .content {
+  color: #e0e0e0;
+}
+
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
