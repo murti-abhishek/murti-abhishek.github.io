@@ -1,21 +1,59 @@
-body.dark {
-  background-color: #121212;
-  color: #ffffff;
+/* Dark Mode Base */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
 }
 
-body.dark header {
-  background-color: #000000;
-  color: #ffffff;
+/* Headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff !important;
 }
 
-body.dark .sidebar {
-  background-color: #1e1e1e;
+/* Paragraphs and text */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode div,
+body.dark-mode span {
+  color: #f0f0f0 !important;
 }
 
-body.dark .sidebar h2 {
-  color: #ffffff;
+/* Links */
+body.dark-mode a {
+  color: #58a6ff !important;
+}
+body.dark-mode a:hover {
+  color: #89caff !important;
 }
 
-body.dark .sidebar a {
-  color: #ffffff;
+/* Code blocks */
+body.dark-mode pre,
+body.dark-mode code {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+}
+
+/* Horizontal rule */
+body.dark-mode hr {
+  border-top: 1px solid #444 !important;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .sidebar h2,
+body.dark-mode .sidebar li,
+body.dark-mode .sidebar a {
+  color: #f0f0f0 !important;
+}
+
+/* Toggle Button Contrast */
+body.dark-mode #dark-mode-toggle {
+  color: #ccc !important;
 }
