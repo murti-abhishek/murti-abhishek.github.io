@@ -29,7 +29,7 @@ Building a prototype LLM-powered agent that generates mechanistic hypotheses fro
 
 ### Xenium Spatial Assignment and Tumor Microenvironment Analysis
 Developing a Python package to analyze tumor microenvironment in spatial transcriptomics data. The package uses a graph-based method to assign tumor regions.
-[View on GitHub](https://github.com/murti-abhishek/spatialzones-xenium)
+[View on GitHub](https://github.com/murti-abhishek/spatialzones)
 
 ---
 
