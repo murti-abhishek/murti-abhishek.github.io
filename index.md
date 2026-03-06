@@ -6,91 +6,91 @@ description: Computational biology, bioinformatics, and software projects by Abh
 
 <main class="site-main">
   <header class="hero section-reveal">
-    <p class="eyebrow">Computational Biology + Applied Engineering</p>
-    <h1>Abhishek Murti</h1>
-    <p class="hero-copy">
-      I build computational tools for transcriptomics, spatial biology, and multi-omics analysis.
-      This site tracks my work and automatically pulls every public project from GitHub.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
-      <a class="btn btn-secondary" href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-      <a class="btn btn-ghost" href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="hero-copy-wrap">
+      <p class="eyebrow">Computational Biology Portfolio</p>
+      <h1>Abhishek Murti</h1>
+      <p class="hero-copy">
+        I design computational systems for single-cell and spatial transcriptomics. This page is intentionally focused:
+        only the projects I actively showcase, plus current research direction.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
+        <a class="btn btn-secondary" href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
     </div>
-    <ul class="hero-meta">
-      <li>Bioinformatician at UCSF</li>
-      <li>Single-cell + spatial transcriptomics</li>
-      <li>San Francisco, California</li>
-    </ul>
+
+    <aside class="hero-panel">
+      <h2>Current Focus</h2>
+      <ul>
+        <li>Single-cell and single-nuclei RNA-seq</li>
+        <li>Spatial transcriptomics and region assignment</li>
+        <li>Multi-omics integration for liver disease biology</li>
+      </ul>
+      <p>Bioinformatician at UCSF, San Francisco.</p>
+    </aside>
   </header>
 
   <section id="projects" class="projects section-reveal">
     <div class="section-heading">
-      <h2>Project Archive</h2>
-      <p>All public repositories from <code>murti-abhishek</code>, searchable and sortable.</p>
+      <h2>Selected Projects</h2>
+      <p>Only the repositories I currently want public-facing.</p>
     </div>
-
-    <div class="controls">
-      <label class="control search-control" for="project-search">
-        <span>Search</span>
-        <input id="project-search" type="search" placeholder="Find by name or description" autocomplete="off">
-      </label>
-
-      <label class="control sort-control" for="project-sort">
-        <span>Sort</span>
-        <select id="project-sort">
-          <option value="updated">Recently Updated</option>
-          <option value="stars">Most Stars</option>
-          <option value="name">Name (A-Z)</option>
-        </select>
-      </label>
-    </div>
-
-    <div id="language-filters" class="language-filters" aria-label="Filter projects by language"></div>
-    <p id="projects-status" class="projects-status" role="status">Loading projects from GitHub...</p>
 
     <div id="project-grid" class="project-grid" aria-live="polite">
-      <article class="project-card placeholder">
-        <h3>Loading repositories...</h3>
-      </article>
-    </div>
-
-    <noscript>
-      <p class="projects-status">JavaScript is disabled. Browse repositories directly on <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-    </noscript>
-  </section>
-
-  <section class="featured section-reveal">
-    <div class="section-heading">
-      <h2>Featured Builds</h2>
-      <p>Highlighted tools currently under active development.</p>
-    </div>
-
-    <div class="featured-grid">
-      <article class="featured-card">
+      <article class="project-card" data-repo="scAM.jl">
+        <p class="project-tag">Julia</p>
         <h3>scAM.jl</h3>
-        <p>A Julia toolkit for single-cell transcriptomics workflows, including clustering and marker discovery.</p>
-        <a href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Open Repository</a>
+        <p class="project-description">A Julia toolkit for single-cell transcriptomics workflows, including clustering, dimensionality reduction, visualization, and marker discovery.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
       </article>
 
-      <article class="featured-card">
+      <article class="project-card" data-repo="sc-ai-hb">
+        <p class="project-tag">AI + Oncology</p>
         <h3>sc-ai-hb</h3>
-        <p>An AI scientist prototype that generates mechanistic hypotheses from tumor transcriptomics data.</p>
-        <a href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Open Repository</a>
+        <p class="project-description">An LLM-powered prototype that proposes mechanistic hypotheses from tumor transcriptomics signals and context.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
       </article>
 
-      <article class="featured-card">
+      <article class="project-card" data-repo="spatialzones">
+        <p class="project-tag">Python</p>
         <h3>spatialzones</h3>
-        <p>A Python package for graph-based spatial tumor region assignment and microenvironment analysis.</p>
-        <a href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Open Repository</a>
+        <p class="project-description">A graph-based package for spatial tumor microenvironment analysis and tumor zone assignment in transcriptomics datasets.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
       </article>
     </div>
+
+    <p id="projects-status" class="projects-status" role="status">Syncing latest repository stats...</p>
   </section>
 
   <section class="research section-reveal">
     <div class="section-heading">
       <h2>Research Snapshot</h2>
-      <p>Current scientific focus areas and selected publications.</p>
+      <p>Current focus areas and selected publications.</p>
     </div>
 
     <div class="research-grid">
@@ -114,7 +114,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
   </section>
 
   <footer class="site-footer section-reveal">
-    <p>Built for GitHub Pages. Updated automatically as new repositories are added.</p>
+    <p>Designed for GitHub Pages and curated to highlight selected work.</p>
     <p class="footer-links">
       <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
