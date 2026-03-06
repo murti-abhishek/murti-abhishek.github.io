@@ -9,6 +9,17 @@
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="website">
 
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem("theme");
+        document.documentElement.setAttribute("data-theme", storedTheme === "light" ? "light" : "dark");
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
@@ -17,6 +28,11 @@
   <script defer src="{{ '/assets/js/projects.js' | relative_url }}"></script>
 </head>
 <body>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" aria-live="polite">
+    <span class="theme-toggle-icon" data-role="theme-icon">☀</span>
+    <span class="theme-toggle-label" data-role="theme-label">Light Mode</span>
+  </button>
+
   <div class="page-shell">
     {{ content }}
   </div>

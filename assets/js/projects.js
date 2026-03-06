@@ -1,16 +1,65 @@
 (() => {
   const USERNAME = "murti-abhishek";
 
-  const statusEl = document.getElementById("projects-status");
-  const cards = Array.from(document.querySelectorAll("[data-repo]"));
-
-  if (!cards.length || !statusEl) {
-    return;
-  }
-
+  setupThemeToggle();
   syncSelectedProjects();
 
-  async function syncSelectedProjects() {
+  function setupThemeToggle() {
+    const root = document.documentElement;
+    const toggleButton = document.getElementById("theme-toggle");
+
+    if (!toggleButton) {
+      return;
+    }
+
+    const iconEl = toggleButton.querySelector('[data-role="theme-icon"]');
+    const labelEl = toggleButton.querySelector('[data-role="theme-label"]');
+
+    const updateToggleLabel = () => {
+      const currentTheme = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+      if (iconEl) {
+        iconEl.textContent = nextTheme === "light" ? "☀" : "🌙";
+      }
+
+      if (labelEl) {
+        labelEl.textContent = nextTheme === "light" ? "Light Mode" : "Dark Mode";
+      }
+
+      toggleButton.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+    };
+
+    toggleButton.addEventListener("click", () => {
+      const currentTheme = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+      root.setAttribute("data-theme", nextTheme);
+
+      try {
+        localStorage.setItem("theme", nextTheme);
+      } catch (error) {
+        console.error("Could not save theme preference", error);
+      }
+
+      updateToggleLabel();
+    });
+
+    updateToggleLabel();
+  }
+
+  function syncSelectedProjects() {
+    const statusEl = document.getElementById("projects-status");
+    const cards = Array.from(document.querySelectorAll("[data-repo]"));
+
+    if (!cards.length || !statusEl) {
+      return;
+    }
+
+    updateCards(cards, statusEl);
+  }
+
+  async function updateCards(cards, statusEl) {
     let successCount = 0;
 
     await Promise.all(
@@ -29,7 +78,7 @@
     );
 
     if (successCount === cards.length) {
-      statusEl.textContent = "Showing only your selected projects with live GitHub stats.";
+      statusEl.textContent = "Showing selected projects with live GitHub metadata.";
       return;
     }
 
@@ -66,6 +115,7 @@
     const homepageLink = card.querySelector('[data-field="homepage"]');
     if (homepageLink && repo.homepage) {
       homepageLink.href = repo.homepage;
+      homepageLink.style.display = "";
     }
 
     if (homepageLink && !repo.homepage) {

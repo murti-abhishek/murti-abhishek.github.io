@@ -10,8 +10,9 @@ description: Computational biology, bioinformatics, and software projects by Abh
       <p class="eyebrow">Computational Biology Portfolio</p>
       <h1>Abhishek Murti</h1>
       <p class="hero-copy">
-        I design computational systems for single-cell and spatial transcriptomics. This page is intentionally focused:
-        only the projects I actively showcase, plus current research direction.
+        Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
+        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and developer tools
+        for liver disease and tumor microenvironment research.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
@@ -23,11 +24,11 @@ description: Computational biology, bioinformatics, and software projects by Abh
     <aside class="hero-panel">
       <h2>Current Focus</h2>
       <ul>
-        <li>Single-cell and single-nuclei RNA-seq</li>
-        <li>Spatial transcriptomics and region assignment</li>
-        <li>Multi-omics integration for liver disease biology</li>
+        <li>Single-cell and single-nuclei RNA-seq at cohort scale</li>
+        <li>Spatial transcriptomics with tumor-region assignment workflows</li>
+        <li>Multi-omics integration for hepatoblastoma and autoimmune hepatitis</li>
       </ul>
-      <p>Bioinformatician at UCSF, San Francisco.</p>
+      <p>Based in San Francisco. I work at the intersection of computational method design and translational biology.</p>
     </aside>
   </header>
 
@@ -39,9 +40,9 @@ description: Computational biology, bioinformatics, and software projects by Abh
 
     <div id="project-grid" class="project-grid" aria-live="polite">
       <article class="project-card" data-repo="scAM.jl">
-        <p class="project-tag">Julia</p>
+        <p class="project-tag">Julia Toolkit</p>
         <h3>scAM.jl</h3>
-        <p class="project-description">A Julia toolkit for single-cell transcriptomics workflows, including clustering, dimensionality reduction, visualization, and marker discovery.</p>
+        <p class="project-description">Open-source Julia package for transcriptomics analysis from preprocessing through clustering, marker discovery, and UMAP, built as a high-performance alternative to typical R/Python workflows.</p>
         <ul class="project-meta">
           <li data-field="language">Language: loading...</li>
           <li data-field="stars">Stars: loading...</li>
@@ -54,9 +55,9 @@ description: Computational biology, bioinformatics, and software projects by Abh
       </article>
 
       <article class="project-card" data-repo="sc-ai-hb">
-        <p class="project-tag">AI + Oncology</p>
+        <p class="project-tag">AI Scientist</p>
         <h3>sc-ai-hb</h3>
-        <p class="project-description">An LLM-powered prototype that proposes mechanistic hypotheses from tumor transcriptomics signals and context.</p>
+        <p class="project-description">End-to-end Python framework that combines single-cell tumor profiles with LLM reasoning to classify hepatoblastoma subtypes and generate biologically interpretable hypotheses with supporting literature context.</p>
         <ul class="project-meta">
           <li data-field="language">Language: loading...</li>
           <li data-field="stars">Stars: loading...</li>
@@ -69,9 +70,9 @@ description: Computational biology, bioinformatics, and software projects by Abh
       </article>
 
       <article class="project-card" data-repo="spatialzones">
-        <p class="project-tag">Python</p>
+        <p class="project-tag">Spatial Genomics</p>
         <h3>spatialzones</h3>
-        <p class="project-description">A graph-based package for spatial tumor microenvironment analysis and tumor zone assignment in transcriptomics datasets.</p>
+        <p class="project-description">Python package for inside/interface/outside tumor region assignment in spatial transcriptomics using nearest-neighbor context, with built-in visual diagnostics and downstream expression profiling.</p>
         <ul class="project-meta">
           <li data-field="language">Language: loading...</li>
           <li data-field="stars">Stars: loading...</li>
@@ -97,8 +98,8 @@ description: Computational biology, bioinformatics, and software projects by Abh
       <article class="panel">
         <h3>UCSF Projects</h3>
         <ul>
-          <li><strong>Hepatoblastoma Tumor Atlas:</strong> Building single-cell and single-nuclei atlases to map transcriptional heterogeneity in high-risk pediatric liver cancer.</li>
-          <li><strong>Autoimmune Hepatitis:</strong> Profiling periportal hepatocyte injury and immune signaling axes using human liver biopsy snRNA-seq.</li>
+          <li><strong>Hepatoblastoma Tumor Atlas:</strong> Building single-cell and single-nuclei atlases to map transcriptional heterogeneity and subtype-specific programs in pediatric liver cancer.</li>
+          <li><strong>Autoimmune Hepatitis:</strong> Integrating bulk, single-nuclei, and spatial transcriptomics from biopsies to identify candidate autoantigens and actionable immune pathways.</li>
         </ul>
       </article>
 
@@ -106,7 +107,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         <h3>Selected Publications</h3>
         <ul>
           <li><a href="https://doi.org/10.1038/s41587-024-02523-6" target="_blank" rel="noopener noreferrer">Nature Biotechnology (2025): AAV capsid prioritization in human livers</a></li>
-          <li><a href="https://doi.org/10.7554/eLife.81090" target="_blank" rel="noopener noreferrer">eLife (2023): Transcriptional signatures in response to COVID-19</a></li>
+          <li><a href="https://doi.org/10.7554/eLife.81090" target="_blank" rel="noopener noreferrer">eLife (2023): Pervasive transcriptional signatures across organs in COVID-19</a></li>
           <li><a href="https://doi.org/10.26508/lsa.202201701" target="_blank" rel="noopener noreferrer">Life Science Alliance (2022): MERFISH and RNA-seq concordance</a></li>
         </ul>
       </article>
@@ -114,7 +115,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
   </section>
 
   <footer class="site-footer section-reveal">
-    <p>Designed for GitHub Pages and curated to highlight selected work.</p>
+    <p>Dark mode by default, with an instant light-mode toggle for readability preferences.</p>
     <p class="footer-links">
       <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
