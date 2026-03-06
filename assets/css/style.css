@@ -315,19 +315,19 @@ h3 {
 }
 
 .btn-primary {
-  background: #9acbff;
-  color: #123865;
+  background: #ffbfad;
+  color: #2e1b12;
 }
 
 .btn-secondary {
-  background: #d5e9ff;
-  color: #17395f;
-  border-color: rgba(212, 231, 255, 0.75);
+  background: #ffd8c7;
+  color: #5a2d1c;
+  border-color: rgba(255, 221, 204, 0.82);
 }
 
 .btn-ghost {
-  border-color: rgba(216, 232, 255, 0.66);
-  color: #ebf4ff;
+  border-color: rgba(255, 214, 194, 0.78);
+  color: #ffe7dc;
 }
 
 .hero-panel {
