@@ -9,6 +9,12 @@ description: Computational biology, bioinformatics, and software projects by Abh
     <div class="hero-copy-wrap">
       <p class="eyebrow">Computational Biology Portfolio</p>
       <h1>Abhishek Murti</h1>
+      <p class="hero-location">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.06 7 13 7 13s7-7.94 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"></path>
+        </svg>
+        <span>San Francisco, USA</span>
+      </p>
       <p class="hero-copy">
         Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
         single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and research software
@@ -17,6 +23,11 @@ description: Computational biology, bioinformatics, and software projects by Abh
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
+        <a class="btn btn-secondary" href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-secondary" href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+        <a class="btn btn-secondary" href="{{ '/assets/docs/Abhishek_Murti_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+        <a class="btn btn-secondary" href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
       </div>
     </div>
 
@@ -27,7 +38,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         <li>Spatial transcriptomics with tumor-region assignment workflows</li>
         <li>Multi-omics integration for hepatoblastoma and autoimmune hepatitis</li>
       </ul>
-      <p>Based in San Francisco. I work at the intersection of computational method design and translational biology.</p>
+      <p>I work at the intersection of computational method design and translational biology.</p>
     </aside>
   </header>
 
@@ -128,13 +139,6 @@ description: Computational biology, bioinformatics, and software projects by Abh
   </section>
 
   <footer class="site-footer section-reveal">
-    <p class="footer-links">
-      <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      <a href="{{ '/assets/docs/Abhishek_Murti_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
-      <a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
-      <a href="mailto:murtiabhishek@gmail.com">Email</a>
-    </p>
+    <p>Building computational tools for biology and translational medicine.</p>
   </footer>
 </main>
