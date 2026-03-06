@@ -320,9 +320,9 @@ h3 {
 }
 
 .btn-secondary {
-  background: #ffd8c7;
-  color: #5a2d1c;
-  border-color: rgba(255, 221, 204, 0.82);
+  background: #ffbfad;
+  color: #2e1b12;
+  border-color: transparent;
 }
 
 .btn-ghost {
