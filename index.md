@@ -11,28 +11,12 @@ description: Computational biology, bioinformatics, and software projects by Abh
       <h1>Abhishek Murti</h1>
       <p class="hero-copy">
         Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
-        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines, foundation models,
-        and research software for liver disease and tumor microenvironment discovery.
+        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and research software
+        for liver disease and tumor microenvironment discovery. I also develop foundation models for liver biology,
+        including LiverTransformer.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
-        <a class="btn btn-secondary" href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-
-      <div class="impact-strip">
-        <article class="impact-item">
-          <p class="impact-value" data-counter="1.04" data-decimals="2" data-suffix="M">1.04M</p>
-          <p class="impact-label">Human liver cells used to pre-train LiverTransformer</p>
-        </article>
-        <article class="impact-item">
-          <p class="impact-value" data-counter="85" data-decimals="0" data-suffix="K+">85K+</p>
-          <p class="impact-label">Cells in cross-institutional atlas projects</p>
-        </article>
-        <article class="impact-item">
-          <p class="impact-value" data-counter="125" data-decimals="0">125</p>
-          <p class="impact-label">Cell types represented in foundation-model training</p>
-        </article>
       </div>
     </div>
 
@@ -54,7 +38,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
     </div>
 
     <div id="project-grid" class="project-grid" aria-live="polite">
-      <article class="project-card project-card-featured">
+      <article class="project-card">
         <p class="project-tag">Foundation Model</p>
         <h3>LiverTransformer</h3>
         <p class="project-description">Liver-specific transformer (23.6M parameters) pre-trained using masked gene prediction on 1.04M human liver cells (36K genes, 7 diseases, 125 cell types), with strong transfer to spatial transcriptomics tasks including hepatocyte zonation.</p>
@@ -146,6 +130,9 @@ description: Computational biology, bioinformatics, and software projects by Abh
   <footer class="site-footer section-reveal">
     <p class="footer-links">
       <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="{{ '/assets/docs/Abhishek_Murti_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
       <a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
       <a href="mailto:murtiabhishek@gmail.com">Email</a>
     </p>

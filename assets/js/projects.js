@@ -4,7 +4,6 @@
 
   setupThemeToggle();
   setupRevealAnimations();
-  setupCounters();
   setupCardTilt();
   syncSelectedProjects();
 
@@ -87,76 +86,6 @@
     for (const item of items) {
       observer.observe(item);
     }
-  }
-
-  function setupCounters() {
-    const counters = Array.from(document.querySelectorAll("[data-counter]"));
-    if (!counters.length) {
-      return;
-    }
-
-    const setFinal = (node) => {
-      const target = Number(node.dataset.counter || "0");
-      const decimals = Number(node.dataset.decimals || "0");
-      const suffix = node.dataset.suffix || "";
-      node.textContent = formatCounter(target, decimals, suffix);
-    };
-
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-      counters.forEach(setFinal);
-      return;
-    }
-
-    counters.forEach((counter) => {
-      counter.textContent = formatCounter(0, Number(counter.dataset.decimals || "0"), counter.dataset.suffix || "");
-    });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) {
-            continue;
-          }
-
-          const node = entry.target;
-          observer.unobserve(node);
-          animateCounter(node);
-        }
-      },
-      {
-        threshold: 0.35
-      }
-    );
-
-    counters.forEach((counter) => observer.observe(counter));
-  }
-
-  function animateCounter(node) {
-    const target = Number(node.dataset.counter || "0");
-    const decimals = Number(node.dataset.decimals || "0");
-    const suffix = node.dataset.suffix || "";
-    const durationMs = 1200;
-    const start = performance.now();
-
-    const step = (timestamp) => {
-      const elapsed = timestamp - start;
-      const progress = Math.min(elapsed / durationMs, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = target * eased;
-
-      node.textContent = formatCounter(value, decimals, suffix);
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    };
-
-    requestAnimationFrame(step);
-  }
-
-  function formatCounter(value, decimals, suffix) {
-    const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
-    return `${formatted}${suffix}`;
   }
 
   function setupCardTilt() {
