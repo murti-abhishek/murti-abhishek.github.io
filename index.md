@@ -18,8 +18,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
       <p class="hero-copy">
         Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
         single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and research software
-        for liver disease and tumor microenvironment discovery. I also develop foundation models for liver biology,
-        including LiverTransformer.
+        for liver disease and tumor microenvironment discovery. I'm also developing a foundation model for the liver.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>

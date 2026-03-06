@@ -315,13 +315,14 @@ h3 {
 }
 
 .btn-primary {
-  background: #ffbfad;
-  color: #2e1b12;
+  background: #9acbff;
+  color: #123865;
 }
 
 .btn-secondary {
-  background: #e7f3ff;
+  background: #d5e9ff;
   color: #17395f;
+  border-color: rgba(212, 231, 255, 0.75);
 }
 
 .btn-ghost {
@@ -335,12 +336,16 @@ h3 {
   border-radius: 22px;
   padding: 20px 20px 16px;
   backdrop-filter: blur(7px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hero-panel h2 {
   color: #ffffff;
   font-size: 1.42rem;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
 .hero-panel ul {
@@ -352,7 +357,7 @@ h3 {
 }
 
 .hero-panel p {
-  margin: 14px 0 0;
+  margin: 2px 0 0;
   color: #cfe1ff;
   font-size: 0.95rem;
 }
