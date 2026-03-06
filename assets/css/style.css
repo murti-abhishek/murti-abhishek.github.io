@@ -1,62 +1,62 @@
 :root,
 html[data-theme="dark"] {
-  --bg-start: #070d1b;
-  --bg-mid: #0d1630;
-  --bg-end: #131f3d;
-  --grid: rgba(132, 173, 255, 0.08);
+  --bg-start: #060b1a;
+  --bg-mid: #0c1632;
+  --bg-end: #111f45;
+  --grid: rgba(131, 169, 255, 0.08);
 
-  --surface: rgba(16, 27, 52, 0.84);
-  --surface-strong: #132142;
-  --surface-card: #15254a;
+  --surface: rgba(14, 24, 50, 0.8);
+  --surface-strong: #12224b;
+  --surface-card: #152650;
 
-  --text: #eaf0ff;
-  --muted: #a9b9df;
-  --title: #ffffff;
+  --text: #e8efff;
+  --muted: #a4b6e4;
+  --title: #f7faff;
 
-  --accent: #78c8ff;
-  --accent-strong: #4fb4ff;
-  --accent-warm: #ff9e7f;
+  --accent: #73c5ff;
+  --accent-strong: #3eb0ff;
+  --accent-warm: #ff9f87;
 
-  --border: rgba(120, 156, 231, 0.34);
-  --shadow: 0 20px 44px rgba(2, 8, 24, 0.52);
+  --border: rgba(121, 159, 238, 0.36);
+  --shadow: 0 18px 40px rgba(2, 8, 24, 0.54);
 
-  --hero-start: #16244b;
-  --hero-mid: #163f65;
-  --hero-end: #2a406e;
+  --hero-start: #172754;
+  --hero-mid: #17466f;
+  --hero-end: #30487a;
 
-  --chip-bg: rgba(120, 200, 255, 0.12);
-  --meta-bg: rgba(141, 173, 239, 0.14);
-  --panel-bg: rgba(20, 34, 64, 0.72);
+  --chip-bg: rgba(115, 197, 255, 0.14);
+  --meta-bg: rgba(142, 171, 237, 0.16);
+  --panel-bg: rgba(20, 34, 66, 0.74);
 }
 
 html[data-theme="light"] {
-  --bg-start: #edf3ff;
+  --bg-start: #eaf1ff;
   --bg-mid: #f7faff;
-  --bg-end: #eaf1ff;
-  --grid: rgba(44, 67, 110, 0.08);
+  --bg-end: #e4edff;
+  --grid: rgba(45, 69, 117, 0.08);
 
   --surface: rgba(255, 255, 255, 0.88);
   --surface-strong: #ffffff;
   --surface-card: #ffffff;
 
-  --text: #1d2740;
-  --muted: #4f6186;
-  --title: #0f1830;
+  --text: #1c2745;
+  --muted: #4b5f8d;
+  --title: #0f1b38;
 
-  --accent: #0f6ef2;
-  --accent-strong: #0058c7;
-  --accent-warm: #df5c42;
+  --accent: #2467f2;
+  --accent-strong: #0059d0;
+  --accent-warm: #dd5f46;
 
-  --border: rgba(74, 103, 159, 0.27);
-  --shadow: 0 14px 30px rgba(56, 82, 127, 0.16);
+  --border: rgba(74, 106, 167, 0.24);
+  --shadow: 0 14px 30px rgba(56, 83, 126, 0.16);
 
-  --hero-start: #163462;
-  --hero-mid: #17639a;
-  --hero-end: #2f5f9a;
+  --hero-start: #1a3d72;
+  --hero-mid: #1870ab;
+  --hero-end: #3568a5;
 
-  --chip-bg: rgba(15, 110, 242, 0.1);
-  --meta-bg: rgba(44, 89, 173, 0.11);
-  --panel-bg: rgba(248, 252, 255, 0.2);
+  --chip-bg: rgba(36, 103, 242, 0.1);
+  --meta-bg: rgba(44, 90, 173, 0.11);
+  --panel-bg: rgba(246, 251, 255, 0.2);
 }
 
 * {
@@ -73,9 +73,11 @@ body {
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 88% 14%, rgba(120, 200, 255, 0.2), transparent 30%),
-    radial-gradient(circle at 14% 86%, rgba(255, 158, 127, 0.16), transparent 34%),
+    radial-gradient(circle at 88% 14%, rgba(115, 197, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 14% 86%, rgba(255, 159, 135, 0.15), transparent 34%),
     linear-gradient(168deg, var(--bg-start), var(--bg-mid) 52%, var(--bg-end));
+  background-size: 130% 130%;
+  animation: bg-pan 16s ease-in-out infinite alternate;
 }
 
 body::before {
@@ -86,7 +88,49 @@ body::before {
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 44px 44px;
   pointer-events: none;
+  z-index: -2;
+}
+
+.ambient-orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
   z-index: -1;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(6px);
+  opacity: 0.35;
+}
+
+.orb-a {
+  width: 320px;
+  height: 320px;
+  top: -90px;
+  right: -70px;
+  background: radial-gradient(circle, rgba(115, 197, 255, 0.5), rgba(115, 197, 255, 0));
+  animation: float-a 22s ease-in-out infinite;
+}
+
+.orb-b {
+  width: 280px;
+  height: 280px;
+  left: -120px;
+  top: 35%;
+  background: radial-gradient(circle, rgba(255, 159, 135, 0.44), rgba(255, 159, 135, 0));
+  animation: float-b 20s ease-in-out infinite;
+}
+
+.orb-c {
+  width: 260px;
+  height: 260px;
+  right: 12%;
+  bottom: -130px;
+  background: radial-gradient(circle, rgba(124, 155, 255, 0.36), rgba(124, 155, 255, 0));
+  animation: float-c 24s ease-in-out infinite;
 }
 
 .theme-toggle {
@@ -103,26 +147,29 @@ body::before {
   color: var(--text);
   padding: 8px 12px;
   font: inherit;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   cursor: pointer;
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .theme-toggle:hover {
   border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .theme-toggle-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  min-width: 34px;
+  padding: 2px 7px;
+  border-radius: 999px;
   background: var(--chip-bg);
-  font-size: 0.9rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
 }
 
 .page-shell {
@@ -137,21 +184,19 @@ body::before {
 }
 
 .section-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js .section-reveal {
   opacity: 0;
-  transform: translateY(22px);
-  animation: rise 0.7s ease forwards;
+  transform: translateY(24px) scale(0.99);
+  transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.site-main > :nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.site-main > :nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.site-main > :nth-child(4) {
-  animation-delay: 0.3s;
+html.js .section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 h1,
@@ -171,7 +216,7 @@ h3 {
   padding: clamp(26px, 5vw, 44px);
   color: #ecf4ff;
   background: linear-gradient(132deg, var(--hero-start), var(--hero-mid) 45%, var(--hero-end));
-  border: 1px solid rgba(184, 209, 255, 0.3);
+  border: 1px solid rgba(184, 209, 255, 0.32);
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
@@ -190,7 +235,7 @@ h3 {
   height: 320px;
   right: -110px;
   top: -140px;
-  background: radial-gradient(circle, rgba(255, 158, 127, 0.45), rgba(255, 158, 127, 0));
+  background: radial-gradient(circle, rgba(255, 159, 135, 0.44), rgba(255, 159, 135, 0));
 }
 
 .hero::after {
@@ -198,7 +243,7 @@ h3 {
   height: 260px;
   left: -110px;
   bottom: -140px;
-  background: radial-gradient(circle, rgba(120, 200, 255, 0.35), rgba(120, 200, 255, 0));
+  background: radial-gradient(circle, rgba(115, 197, 255, 0.36), rgba(115, 197, 255, 0));
 }
 
 .hero-copy-wrap,
@@ -225,7 +270,7 @@ h3 {
   margin: 0;
   max-width: 58ch;
   color: #dbe7ff;
-  font-size: 1.06rem;
+  font-size: 1.04rem;
   line-height: 1.65;
 }
 
@@ -254,7 +299,7 @@ h3 {
 }
 
 .btn-primary {
-  background: #ffbeac;
+  background: #ffbfad;
   color: #2e1b12;
 }
 
@@ -265,7 +310,36 @@ h3 {
 
 .btn-ghost {
   border-color: rgba(216, 232, 255, 0.66);
-  color: #eaf4ff;
+  color: #ebf4ff;
+}
+
+.impact-strip {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.impact-item {
+  border-radius: 14px;
+  border: 1px solid rgba(211, 229, 255, 0.28);
+  background: rgba(238, 247, 255, 0.1);
+  padding: 10px 12px;
+}
+
+.impact-value {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.impact-label {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #d3e5ff;
 }
 
 .hero-panel {
@@ -323,13 +397,17 @@ h3 {
 }
 
 .project-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  --lift: 0px;
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 18px;
   background: var(--surface-card);
   position: relative;
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transform: perspective(980px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift));
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .project-card::before {
@@ -340,11 +418,11 @@ h3 {
   width: 210px;
   height: 120px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(120, 200, 255, 0.24), rgba(120, 200, 255, 0));
+  background: radial-gradient(circle, rgba(115, 197, 255, 0.24), rgba(115, 197, 255, 0));
 }
 
 .project-card:nth-child(2)::before {
-  background: radial-gradient(circle, rgba(255, 158, 127, 0.26), rgba(255, 158, 127, 0));
+  background: radial-gradient(circle, rgba(255, 159, 135, 0.26), rgba(255, 159, 135, 0));
 }
 
 .project-card:nth-child(3)::before {
@@ -352,8 +430,13 @@ h3 {
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+  --lift: -4px;
   box-shadow: 0 12px 24px rgba(8, 14, 28, 0.22);
+}
+
+.project-card-featured {
+  grid-column: span 2;
+  border-color: rgba(255, 159, 135, 0.45);
 }
 
 .project-tag,
@@ -387,7 +470,7 @@ h3 {
   margin: 9px 0 0;
   color: var(--muted);
   line-height: 1.56;
-  min-height: 118px;
+  min-height: 112px;
 }
 
 .project-meta {
@@ -423,8 +506,13 @@ h3 {
   text-decoration: underline;
 }
 
+.project-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .project-card.is-loaded {
-  border-color: rgba(120, 200, 255, 0.55);
+  border-color: rgba(115, 197, 255, 0.6);
 }
 
 .projects-status {
@@ -472,13 +560,8 @@ h3 {
   text-align: center;
 }
 
-.site-footer p {
-  margin: 0;
-  color: var(--muted);
-}
-
 .footer-links {
-  margin-top: 10px;
+  margin: 0;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -495,10 +578,52 @@ h3 {
   text-decoration: underline;
 }
 
-@keyframes rise {
+@keyframes bg-pan {
+  from {
+    background-position: 0% 0%;
+  }
+
   to {
-    opacity: 1;
-    transform: translateY(0);
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes float-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-22px, 18px);
+  }
+}
+
+@keyframes float-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(16px, -14px);
+  }
+}
+
+@keyframes float-c {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-20px, -20px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .project-card-featured {
+    grid-column: span 1;
   }
 }
 
@@ -509,6 +634,10 @@ h3 {
 
   .hero-panel {
     max-width: 640px;
+  }
+
+  .impact-strip {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -542,5 +671,16 @@ h3 {
 
   .project-description {
     min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .orb,
+  .section-reveal,
+  .project-card,
+  .theme-toggle {
+    animation: none;
+    transition: none;
   }
 }

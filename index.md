@@ -11,13 +11,28 @@ description: Computational biology, bioinformatics, and software projects by Abh
       <h1>Abhishek Murti</h1>
       <p class="hero-copy">
         Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
-        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and developer tools
-        for liver disease and tumor microenvironment research.
+        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines, foundation models,
+        and research software for liver disease and tumor microenvironment discovery.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
         <a class="btn btn-secondary" href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="btn btn-ghost" href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="impact-strip">
+        <article class="impact-item">
+          <p class="impact-value" data-counter="1.04" data-decimals="2" data-suffix="M">1.04M</p>
+          <p class="impact-label">Human liver cells used to pre-train LiverTransformer</p>
+        </article>
+        <article class="impact-item">
+          <p class="impact-value" data-counter="85" data-decimals="0" data-suffix="K+">85K+</p>
+          <p class="impact-label">Cells in cross-institutional atlas projects</p>
+        </article>
+        <article class="impact-item">
+          <p class="impact-value" data-counter="125" data-decimals="0">125</p>
+          <p class="impact-label">Cell types represented in foundation-model training</p>
+        </article>
       </div>
     </div>
 
@@ -34,11 +49,25 @@ description: Computational biology, bioinformatics, and software projects by Abh
 
   <section id="projects" class="projects section-reveal">
     <div class="section-heading">
-      <h2>Selected Projects</h2>
-      <p>Only the repositories I currently want public-facing.</p>
+      <h2>Tooling and Platform Engineering</h2>
+      <p>Production tools and modeling systems for transcriptomics and computational pathology.</p>
     </div>
 
     <div id="project-grid" class="project-grid" aria-live="polite">
+      <article class="project-card project-card-featured">
+        <p class="project-tag">Foundation Model</p>
+        <h3>LiverTransformer</h3>
+        <p class="project-description">Liver-specific transformer (23.6M parameters) pre-trained using masked gene prediction on 1.04M human liver cells (36K genes, 7 diseases, 125 cell types), with strong transfer to spatial transcriptomics tasks including hepatocyte zonation.</p>
+        <ul class="project-meta">
+          <li>Framework: PyTorch</li>
+          <li>Scale: 1.04M cells from CellxGene Census</li>
+          <li>Status: Active research platform (public repo pending)</li>
+        </ul>
+        <div class="project-links">
+          <span class="project-note">Repository not published yet. Release planned after internal validation.</span>
+        </div>
+      </article>
+
       <article class="project-card" data-repo="scAM.jl">
         <p class="project-tag">Julia Toolkit</p>
         <h3>scAM.jl</h3>
@@ -85,7 +114,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
       </article>
     </div>
 
-    <p id="projects-status" class="projects-status" role="status">Syncing latest repository stats...</p>
+    <p id="projects-status" class="projects-status" role="status">Syncing live metadata for public repositories...</p>
   </section>
 
   <section class="research section-reveal">
@@ -115,7 +144,6 @@ description: Computational biology, bioinformatics, and software projects by Abh
   </section>
 
   <footer class="site-footer section-reveal">
-    <p>Dark mode by default, with an instant light-mode toggle for readability preferences.</p>
     <p class="footer-links">
       <a href="https://github.com/murti-abhishek" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener noreferrer">Strava</a>
