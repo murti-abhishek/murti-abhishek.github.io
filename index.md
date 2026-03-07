@@ -62,36 +62,6 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </div>
       </article>
 
-      <article class="project-card" data-repo="scAM.jl">
-        <p class="project-tag">Julia Toolkit</p>
-        <h3>scAM.jl</h3>
-        <p class="project-description">Open-source Julia package for transcriptomics analysis from preprocessing through clustering, marker discovery, and UMAP, built as a high-performance alternative to typical R/Python workflows.</p>
-        <ul class="project-meta">
-          <li data-field="language">Language: loading...</li>
-          <li data-field="stars">Stars: loading...</li>
-          <li data-field="updated">Updated: loading...</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Live Link</a>
-        </div>
-      </article>
-
-      <article class="project-card" data-repo="sc-ai-hb">
-        <p class="project-tag">AI Scientist</p>
-        <h3>sc-ai-hb</h3>
-        <p class="project-description">End-to-end Python framework that combines single-cell tumor profiles with LLM reasoning to classify hepatoblastoma subtypes and generate biologically interpretable hypotheses with supporting literature context.</p>
-        <ul class="project-meta">
-          <li data-field="language">Language: loading...</li>
-          <li data-field="stars">Stars: loading...</li>
-          <li data-field="updated">Updated: loading...</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Live Link</a>
-        </div>
-      </article>
-
       <article class="project-card" data-repo="spatialzones">
         <p class="project-tag">Spatial Genomics</p>
         <h3>spatialzones</h3>
@@ -119,6 +89,36 @@ description: Computational biology, bioinformatics, and software projects by Abh
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Repository</a>
           <a data-field="homepage" href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-repo="scAM.jl">
+        <p class="project-tag">Julia Toolkit</p>
+        <h3>scAM.jl</h3>
+        <p class="project-description">Open-source Julia package for transcriptomics analysis from preprocessing through clustering, marker discovery, and UMAP, built as a high-performance alternative to typical R/Python workflows.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-repo="sc-ai-hb">
+        <p class="project-tag">AI Scientist</p>
+        <h3>sc-ai-hb</h3>
+        <p class="project-description">End-to-end Python framework that combines single-cell tumor profiles with LLM reasoning to classify hepatoblastoma subtypes and generate biologically interpretable hypotheses with supporting literature context.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Live Link</a>
         </div>
       </article>
     </div>
