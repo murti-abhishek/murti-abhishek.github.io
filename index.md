@@ -106,6 +106,21 @@ description: Computational biology, bioinformatics, and software projects by Abh
           <a data-field="homepage" href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Live Link</a>
         </div>
       </article>
+
+      <article class="project-card" data-repo="spatialxgene">
+        <p class="project-tag">Spatial + Atlas</p>
+        <h3>spatialxgene</h3>
+        <p class="project-description">Toolkit for bridging spatial transcriptomics outputs with CellxGene-style exploratory workflows, including utilities for region-aware expression analysis and dataset handoff for interactive atlas inspection.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
+      </article>
     </div>
 
     <p id="projects-status" class="projects-status" role="status">Syncing live metadata for public repositories...</p>
