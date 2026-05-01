@@ -121,6 +121,21 @@ description: Computational biology, bioinformatics, and software projects by Abh
           <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Live Link</a>
         </div>
       </article>
+
+      <article class="project-card" data-repo="nextflow-scrna-cloud">
+        <p class="project-tag">Cloud Pipeline</p>
+        <h3>nextflow-scrna-cloud</h3>
+        <p class="project-description">Cloud-scale scRNA-seq and Perturb-seq data engineering pipeline using Nextflow DSL2 and AWS Batch with Spot instances — from STARsolo alignment through TileDB-SOMA atlas ingestion, with PyTorch DataLoader integration for foundation model training.</p>
+        <ul class="project-meta">
+          <li data-field="language">Language: loading...</li>
+          <li data-field="stars">Stars: loading...</li>
+          <li data-field="updated">Updated: loading...</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener noreferrer">Live Link</a>
+        </div>
+      </article>
     </div>
 
     <p id="projects-status" class="projects-status" role="status">Syncing live metadata for public repositories...</p>
