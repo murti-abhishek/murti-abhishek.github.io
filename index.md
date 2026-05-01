@@ -16,9 +16,10 @@ description: Computational biology, bioinformatics, and software projects by Abh
         <span>San Francisco, USA</span>
       </p>
       <p class="hero-copy">
-        Computational biologist and bioinformatician at UCSF with 4+ years of hands-on work in single-cell,
-        single-nuclei, and spatial transcriptomics. I build production-grade analysis pipelines and research software
-        for liver disease and tumor microenvironment discovery. I'm also developing a foundation model for the liver.
+        I'm building LiverTransformer — a liver-specific foundation model pre-trained on 1.04M human cells
+        across 7 diseases and 125 cell types. At UCSF, I develop the full computational stack for liver disease
+        research: single-cell and spatial transcriptomics pipelines, multi-omics integration, and production
+        bioinformatics software for hepatoblastoma and autoimmune hepatitis.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:murtiabhishek@gmail.com">Email</a>
@@ -73,7 +74,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </ul>
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer">Live Link</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener noreferrer" style="display:none">Live Link</a>
         </div>
       </article>
 
@@ -88,7 +89,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </ul>
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer">Live Link</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener noreferrer" style="display:none">Live Link</a>
         </div>
       </article>
 
@@ -103,7 +104,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </ul>
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer">Live Link</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener noreferrer" style="display:none">Live Link</a>
         </div>
       </article>
 
@@ -118,7 +119,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </ul>
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer">Live Link</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener noreferrer" style="display:none">Live Link</a>
         </div>
       </article>
 
@@ -133,7 +134,7 @@ description: Computational biology, bioinformatics, and software projects by Abh
         </ul>
         <div class="project-links">
           <a href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener noreferrer">Repository</a>
-          <a data-field="homepage" href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener noreferrer">Live Link</a>
+          <a data-field="homepage" href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener noreferrer" style="display:none">Live Link</a>
         </div>
       </article>
     </div>
@@ -162,6 +163,8 @@ description: Computational biology, bioinformatics, and software projects by Abh
           <li><a href="https://doi.org/10.1038/s41587-024-02523-6" target="_blank" rel="noopener noreferrer">Nature Biotechnology (2025): AAV capsid prioritization in human livers</a></li>
           <li><a href="https://doi.org/10.7554/eLife.81090" target="_blank" rel="noopener noreferrer">eLife (2023): Pervasive transcriptional signatures across organs in COVID-19</a></li>
           <li><a href="https://doi.org/10.26508/lsa.202201701" target="_blank" rel="noopener noreferrer">Life Science Alliance (2022): MERFISH and RNA-seq concordance</a></li>
+          <li><a href="https://doi.org/10.1101/2024.08.15.607661" target="_blank" rel="noopener noreferrer">bioRxiv (2024): Perinatal liver inflammation, CXCL10, and myeloid progenitors</a></li>
+          <li><a href="https://doi.org/10.1101/2024.12.03.626516" target="_blank" rel="noopener noreferrer">bioRxiv (2024): Tabula Sapiens — transcription factors, senescence, and sex-specific features across 28 organs</a></li>
         </ul>
       </article>
     </div>

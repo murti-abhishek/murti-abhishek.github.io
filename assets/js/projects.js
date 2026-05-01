@@ -23,11 +23,11 @@
       const nextTheme = theme === "dark" ? "light" : "dark";
 
       if (iconEl) {
-        iconEl.textContent = nextTheme === "light" ? "SUN" : "MOON";
+        iconEl.textContent = theme === "dark" ? "MOON" : "SUN";
       }
 
       if (labelEl) {
-        labelEl.textContent = nextTheme === "light" ? "Light Mode" : "Dark Mode";
+        labelEl.textContent = theme === "dark" ? "Dark Mode" : "Light Mode";
       }
 
       toggleButton.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
