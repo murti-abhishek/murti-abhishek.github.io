@@ -165,6 +165,8 @@ description: Computational biology, bioinformatics, and software projects by Abh
           <li><a href="https://doi.org/10.26508/lsa.202201701" target="_blank" rel="noopener noreferrer">Life Science Alliance (2022): MERFISH and RNA-seq concordance</a></li>
           <li><a href="https://doi.org/10.1101/2024.08.15.607661" target="_blank" rel="noopener noreferrer">bioRxiv (2024): Perinatal liver inflammation, CXCL10, and myeloid progenitors</a></li>
           <li><a href="https://doi.org/10.1101/2024.12.03.626516" target="_blank" rel="noopener noreferrer">bioRxiv (2024): Tabula Sapiens — transcription factors, senescence, and sex-specific features across 28 organs</a></li>
+          <li><a href="https://doi.org/10.1038/s41467-025-64511-x" target="_blank" rel="noopener noreferrer">Nature Communications (2025): Benchmarking cell type and gene set annotation with AnnDictionary</a></li>
+          <li><a href="https://doi.org/10.1101/2023.01.10.523462" target="_blank" rel="noopener noreferrer">bioRxiv (2023): Modeling and analysis of a cell-free gluconate responsive biosensor</a></li>
         </ul>
       </article>
     </div>
