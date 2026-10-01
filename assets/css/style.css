@@ -784,6 +784,7 @@ figcaption a {
   border-top: 1px solid var(--line);
 }
 
+.pubs-preprints,
 .pubs-abstracts {
   font-size: 0.92rem;
 }
