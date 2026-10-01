@@ -1,4 +1,10 @@
 title: Abhishek Murti
-description: Computational Biologist | San Francisco
-#theme: jekyll-theme-minimal
-show_downloads: true
+description: Computational biologist at UCSF building single-cell, spatial, and foundation-model tools for liver disease.
+url: https://murti-abhishek.github.io
+author: Abhishek Murti
+lang: en_US
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - .claude
+  - LICENSE

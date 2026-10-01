@@ -1,0 +1,228 @@
+---
+layout: default
+title: Abhishek Murti
+description: Computational biologist at UCSF building single-cell, spatial, and foundation-model tools for liver disease.
+---
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="#main" aria-label="Abhishek Murti, back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 20.2 7.25v9.5L12 21.5l-8.2-4.75v-9.5z"/><circle cx="12" cy="12" r="2.6"/></svg>
+      <span>Abhishek Murti</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#model">Model</a>
+      <a href="#software">Software</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="eyebrow">Computational biologist · UCSF · San Francisco</p>
+      <h1>Abhishek Murti</h1>
+      <p class="lede">
+        I build the computational stack for liver disease research: single-cell and spatial transcriptomics
+        pipelines, multi-omics integration, and a liver-specific foundation model trained on 1.04M human cells.
+      </p>
+      <p class="sub">
+        At the Wang Lab, that work serves hepatoblastoma and autoimmune hepatitis cohorts, from raw reads to
+        tumor-region maps to subtype calls.
+      </p>
+      <div class="actions">
+        <a class="btn btn-solid" href="mailto:murtiabhishek@gmail.com">Email me</a>
+        <a class="btn" href="{{ '/assets/docs/Abhishek_Murti_CV.pdf' | relative_url }}" target="_blank" rel="noopener">CV (PDF)</a>
+        <a class="btn" href="https://github.com/murti-abhishek" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      </div>
+    </div>
+
+    <figure class="lobule" aria-labelledby="lobule-caption">
+      <div class="lobule-head">
+        <span class="mono label">Capture area · simulated</span>
+        <div class="gene-switch" role="group" aria-label="Gene shown on the map">
+          <button type="button" data-gene="CYP2E1" aria-pressed="true">CYP2E1</button>
+          <button type="button" data-gene="CPS1" aria-pressed="false">CPS1</button>
+          <button type="button" data-gene="both" aria-pressed="false">Both</button>
+        </div>
+      </div>
+      <div class="lobule-stage">
+        <canvas id="lobule-canvas" role="img" aria-label="Simulated spatial transcriptomics spots over liver lobules. Pericentral marker CYP2E1 is high around central veins; periportal marker CPS1 is high near portal triads."></canvas>
+      </div>
+      <div class="lobule-foot">
+        <p class="mono readout" id="lobule-readout" aria-live="polite">Hover a spot to read it</p>
+        <div class="scale mono" aria-hidden="true"><span class="scale-bar"></span><span>500 µm</span></div>
+      </div>
+      <figcaption id="lobule-caption">
+        Liver zonation on a Visium-style grid (55 µm spots, 100 µm pitch). CYP2E1 marks the pericentral zone,
+        CPS1 the periportal zone. Spatial work like this is what most of my tools are built for.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="model" class="band">
+    <div class="wrap model">
+      <div class="model-text">
+        <p class="eyebrow">Current build</p>
+        <h2>LiverTransformer</h2>
+        <p>
+          A liver-specific transformer pre-trained with masked gene prediction on 1.04M human liver cells
+          from CELLxGENE Census. It transfers well to spatial tasks, including recovering hepatocyte zonation
+          from spatial transcriptomics.
+        </p>
+        <p class="note">The repository is private for now. I plan to release it after internal validation.</p>
+      </div>
+      <dl class="spec mono">
+        <div><dt>Parameters</dt><dd>23.6M</dd></div>
+        <div><dt>Training cells</dt><dd>1.04M</dd></div>
+        <div><dt>Genes</dt><dd>36K</dd></div>
+        <div><dt>Cell types</dt><dd>125</dd></div>
+        <div><dt>Diseases</dt><dd>7</dd></div>
+        <div><dt>Objective</dt><dd>Masked gene</dd></div>
+        <div><dt>Framework</dt><dd>PyTorch</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="software" class="wrap section">
+    <div class="section-head">
+      <h2>Software</h2>
+      <p>Open-source tools from day-to-day analysis work.</p>
+    </div>
+    <ul class="repos">
+      <li>
+        <a class="repo-name mono" href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener">spatialzones</a>
+        <p class="repo-desc">Assigns cells to inside, interface, and outside tumor regions in spatial transcriptomics using nearest-neighbor context. Includes visual diagnostics and downstream expression profiling. Works with Xenium, Visium, and similar platforms.</p>
+        <p class="repo-meta mono"><span>Spatial</span><span>Python</span></p>
+      </li>
+      <li>
+        <a class="repo-name mono" href="https://github.com/murti-abhishek/spatialxgene" target="_blank" rel="noopener">spatialxgene</a>
+        <p class="repo-desc">Interactive viewer for spatial transcriptomics stored as h5ad files. Datashader rendering, linked spatial, UMAP, PCA, and scVI views, lasso-to-DGE selection, and stitched multi-slide datasets.</p>
+        <p class="repo-meta mono"><span>Viewer</span><span>Python</span></p>
+      </li>
+      <li>
+        <a class="repo-name mono" href="https://github.com/murti-abhishek/nextflow-scrna-cloud" target="_blank" rel="noopener">nextflow-scrna-cloud</a>
+        <p class="repo-desc">scRNA-seq and Perturb-seq pipeline on Nextflow DSL2 and AWS Batch with Spot instances. Runs from STARsolo alignment through TileDB-SOMA atlas ingestion, with a PyTorch DataLoader for foundation-model training.</p>
+        <p class="repo-meta mono"><span>Pipeline</span><span>Nextflow</span></p>
+      </li>
+      <li>
+        <a class="repo-name mono" href="https://github.com/murti-abhishek/sc-ai-hb" target="_blank" rel="noopener">sc-ai-hb</a>
+        <p class="repo-desc">Combines single-cell tumor profiles with LLM reasoning to classify hepatoblastoma subtypes and propose interpretable hypotheses, with supporting literature.</p>
+        <p class="repo-meta mono"><span>AI scientist</span><span>Python</span></p>
+      </li>
+      <li>
+        <a class="repo-name mono" href="https://github.com/murti-abhishek/scAM.jl" target="_blank" rel="noopener">scAM.jl</a>
+        <p class="repo-desc">Single-cell analysis in Julia: preprocessing, clustering, marker discovery, and UMAP, written as a fast alternative to the usual R and Python workflows.</p>
+        <p class="repo-meta mono"><span>Toolkit</span><span>Julia</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="research" class="wrap section">
+    <div class="section-head">
+      <h2>Research at UCSF</h2>
+      <p>Translational projects in the Wang Lab and with collaborators.</p>
+    </div>
+    <div class="projects">
+      <article>
+        <h3>Hepatoblastoma tumor atlas</h3>
+        <p>Single-cell, single-nuclei, and Xenium spatial atlases of pediatric liver cancer, mapping transcriptional heterogeneity and subtype-specific programs. Tumor-region assignment and DNA/RNA integration feed into subtype calls.</p>
+        <p class="tags mono"><span>snRNA-seq</span><span>Xenium</span><span>Multi-omics</span></p>
+      </article>
+      <article>
+        <h3>Autoimmune hepatitis</h3>
+        <p>Bulk, single-nuclei, and spatial transcriptomics from patient biopsies, integrated to find candidate autoantigens and immune pathways that could be targeted.</p>
+        <p class="tags mono"><span>Bulk RNA-seq</span><span>snRNA-seq</span><span>Spatial</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="wrap section">
+    <div class="section-head">
+      <h2>Selected publications</h2>
+      <p>Full list on <a href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </div>
+    <ol class="pubs">
+      <li>
+        <span class="pub-year mono">2025</span>
+        <span class="pub-venue">Nature Biotechnology</span>
+        <a href="https://doi.org/10.1038/s41587-024-02523-6" target="_blank" rel="noopener">AAV capsid prioritization in human livers</a>
+      </li>
+      <li class="repeat">
+        <span class="pub-year mono">2025</span>
+        <span class="pub-venue">Nature Communications</span>
+        <a href="https://doi.org/10.1038/s41467-025-64511-x" target="_blank" rel="noopener">Benchmarking cell type and gene set annotation with AnnDictionary</a>
+      </li>
+      <li>
+        <span class="pub-year mono">2024</span>
+        <span class="pub-venue">bioRxiv</span>
+        <a href="https://doi.org/10.1101/2024.12.03.626516" target="_blank" rel="noopener">Tabula Sapiens: transcription factors, senescence, and sex-specific features across 28 organs</a>
+      </li>
+      <li class="repeat">
+        <span class="pub-year mono">2024</span>
+        <span class="pub-venue">bioRxiv</span>
+        <a href="https://doi.org/10.1101/2024.08.15.607661" target="_blank" rel="noopener">Perinatal liver inflammation, CXCL10, and myeloid progenitors</a>
+      </li>
+      <li>
+        <span class="pub-year mono">2023</span>
+        <span class="pub-venue">eLife</span>
+        <a href="https://doi.org/10.7554/eLife.81090" target="_blank" rel="noopener">Pervasive transcriptional signatures across organs in COVID-19</a>
+      </li>
+      <li class="repeat">
+        <span class="pub-year mono">2023</span>
+        <span class="pub-venue">bioRxiv</span>
+        <a href="https://doi.org/10.1101/2023.01.10.523462" target="_blank" rel="noopener">Modeling and analysis of a cell-free gluconate-responsive biosensor</a>
+      </li>
+      <li>
+        <span class="pub-year mono">2022</span>
+        <span class="pub-venue">Life Science Alliance</span>
+        <a href="https://doi.org/10.26508/lsa.202201701" target="_blank" rel="noopener">MERFISH and RNA-seq concordance</a>
+      </li>
+    </ol>
+  </section>
+
+  <section id="path" class="wrap section">
+    <div class="section-head">
+      <h2>How I got here</h2>
+      <p>From modeling fluids to modeling cells.</p>
+    </div>
+    <ol class="path">
+      <li>
+        <p class="path-place">BITS Pilani</p>
+        <p>Undergraduate training in chemical engineering, with computational fluid dynamics as the first taste of simulation work.</p>
+      </li>
+      <li>
+        <p class="path-place">Cornell University</p>
+        <p>Master's in chemical and biomolecular engineering. Thesis on ODE-based and constraint-based models of cell-free biosensors.</p>
+      </li>
+      <li>
+        <p class="path-place">UCSF, Wang Lab</p>
+        <p>Bioinformatician working on liver biology, with contributions to Tabula Sapiens and the COVID Tissue Atlas along the way.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-title">Get in touch</p>
+      <p class="mono email">murtiabhishek@gmail.com</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/murti-abhishek" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/abhishek-murti" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://scholar.google.com/citations?user=DqYP1wsAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a></li>
+      <li><a href="{{ '/assets/docs/Abhishek_Murti_CV.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.strava.com/athletes/84323856" target="_blank" rel="noopener">Strava</a></li>
+    </ul>
+    <p class="mono updated">Updated {{ site.time | date: "%B %Y" }}</p>
+  </div>
+</footer>
