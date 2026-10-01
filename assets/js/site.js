@@ -74,6 +74,7 @@
   let raf = 0;
   let autoplay = [];
   let counts = { inside: 0, interface: 0, outside: 0 };
+  let legendMax = 0;
 
   // Deterministic randomness so every visitor sees the same section
   let seed = 1;
@@ -375,6 +376,19 @@
     } else {
       legend.innerHTML = REGIONS.map((r) => item(palette["r-" + r.key], r.name, counts[r.key])).join("");
     }
+    // Hold the tallest legend height so switching steps never shifts the page
+    legendMax = Math.max(legendMax, legend.offsetHeight);
+    legend.style.minHeight = `${legendMax}px`;
+  }
+
+  function measureLegend() {
+    if (!legend) return;
+    legend.style.minHeight = "";
+    legendMax = 0;
+    const current = step;
+    for (const n of [1, 2, 3]) { step = n; renderLegend(); }
+    step = current;
+    renderLegend();
   }
 
   function setStep(n, fromUser) {
@@ -424,7 +438,7 @@
     canvas.height = Math.round(H * dpr);
     hovered = null;
     build();
-    renderLegend();
+    measureLegend();
     schedule();
   }
 

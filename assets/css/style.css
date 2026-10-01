@@ -286,7 +286,7 @@ a:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
+  align-items: start;
   padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 7vw, 5rem);
 }
 
@@ -302,6 +302,39 @@ a:hover {
   letter-spacing: -0.035em;
   line-height: 0.95;
   font-variation-settings: "opsz" 96;
+}
+
+.hero-id {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step-1);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+
+.role span {
+  color: var(--accent);
+  margin-inline: 0.3rem;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.location svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--accent);
+  flex: none;
 }
 
 .lede {
@@ -373,6 +406,10 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.xen-foot {
+  flex-wrap: nowrap;
+}
+
 .label {
   font-size: 0.74rem;
   letter-spacing: 0.06em;
@@ -428,6 +465,10 @@ a:hover {
 }
 
 .readout {
+  flex: 1 1 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.76rem;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
@@ -435,6 +476,7 @@ a:hover {
 }
 
 .scale {
+  flex: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -470,7 +512,7 @@ figcaption a {
   gap: 0.35rem 1rem;
   font-size: 0.74rem;
   color: var(--muted);
-  min-height: 1.2rem;
+  align-content: flex-start;
   font-variant-numeric: tabular-nums;
 }
 
@@ -868,6 +910,7 @@ figcaption a {
 }
 
 @media (max-width: 720px) {
+
   .nav {
     display: none;
   }
