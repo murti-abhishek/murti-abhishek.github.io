@@ -1,4 +1,4 @@
-/* Layout: single 72rem column, left-aligned editorial rows; hero splits text / lobule map.
+/* Layout: single 72rem column, left-aligned editorial rows; hero splits text / Xenium-style cell map.
    Light theme = brightfield H&E slide (hematoxylin ink, eosin accent).
    Dark theme  = fluorescence imaging (black field, Cy3 magenta + DAPI blue). */
 :root {
@@ -11,8 +11,13 @@
   --accent: #b8306a;      /* eosin */
   --accent-ink: #ffffff;
   --accent-2: #3d4aa8;    /* hematoxylin */
-  --spot-empty: #e7dfe6;
-  --spot-low: #f1e8ef;
+  --c-hep: #d9cde3;
+  --c-stroma: #6f9f97;
+  --c-immune: #d9962e;
+  --c-endo: #4f63c2;
+  --r-interface: #e08a2e;
+  --r-outside: #c3cbe8;
+  --nucleus: #2a2450;
   --focus: #3d4aa8;
   --footer-bg: #1e1a3a;
   --footer-fg: #f7f4f6;
@@ -44,8 +49,13 @@
     --accent: #ff6aa9;
     --accent-ink: #12040b;
     --accent-2: #7d93ff;
-    --spot-empty: #161a24;
-    --spot-low: #141822;
+    --c-hep: #2f2c45;
+    --c-stroma: #4fa596;
+    --c-immune: #f0b450;
+    --c-endo: #7d93ff;
+    --r-interface: #f2a03f;
+    --r-outside: #27315a;
+    --nucleus: #e7e9f2;
     --focus: #7d93ff;
     --footer-bg: #151926;
     --footer-fg: #e7e9f2;
@@ -63,8 +73,13 @@
   --accent: #ff6aa9;
   --accent-ink: #12040b;
   --accent-2: #7d93ff;
-  --spot-empty: #161a24;
-  --spot-low: #141822;
+  --c-hep: #2f2c45;
+  --c-stroma: #4fa596;
+  --c-immune: #f0b450;
+  --c-endo: #7d93ff;
+  --r-interface: #f2a03f;
+  --r-outside: #27315a;
+  --nucleus: #e7e9f2;
   --focus: #7d93ff;
   --footer-bg: #151926;
   --footer-fg: #e7e9f2;
@@ -325,8 +340,8 @@ a:hover {
   filter: brightness(1.08);
 }
 
-/* ---------- Lobule figure ---------- */
-.lobule {
+/* ---------- Xenium figure ---------- */
+.xen {
   margin: 0;
   min-width: 0;
   display: grid;
@@ -337,8 +352,8 @@ a:hover {
   border-radius: var(--radius);
 }
 
-.lobule-head,
-.lobule-foot {
+.xen-head,
+.xen-foot {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -353,14 +368,14 @@ a:hover {
   color: var(--muted);
 }
 
-.gene-switch {
+.steps {
   display: inline-flex;
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 2px;
 }
 
-.gene-switch button {
+.steps button {
   font-family: var(--font-mono);
   font-size: 0.76rem;
   padding: 0.3rem 0.7rem;
@@ -371,18 +386,27 @@ a:hover {
   cursor: pointer;
 }
 
-.gene-switch button[aria-pressed="true"] {
+.steps button span {
+  opacity: 0.6;
+  margin-right: 0.15rem;
+}
+
+.steps button:hover {
+  color: var(--ink);
+}
+
+.steps button[aria-pressed="true"] {
   background: var(--ink);
   color: var(--paper);
 }
 
-.lobule-stage {
+.xen-stage {
   position: relative;
   aspect-ratio: 4 / 3;
   max-width: 100%;
 }
 
-#lobule-canvas {
+#xen-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -413,12 +437,48 @@ a:hover {
   background: var(--ink);
 }
 
-.lobule figcaption {
+.xen figcaption {
   font-size: 0.82rem;
   line-height: 1.5;
   color: var(--muted);
   border-top: 1px solid var(--line);
   padding-top: 0.75rem;
+}
+
+figcaption a {
+  color: var(--ink);
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 0.74rem;
+  color: var(--muted);
+  min-height: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend i {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 3px;
+  background: var(--sw);
+  display: inline-block;
+}
+
+.legend b {
+  font-weight: 500;
+  color: var(--ink);
 }
 
 /* ---------- Model band ---------- */
@@ -530,7 +590,7 @@ a:hover {
 
 .repos li {
   display: grid;
-  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 13.5rem) minmax(0, 1fr) auto;
   gap: 0.4rem 1.5rem;
   padding-block: 1.15rem;
   border-top: 1px solid var(--line);
@@ -542,6 +602,10 @@ a:hover {
 }
 
 .repo-name {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  align-self: start;
   font-weight: 500;
   font-size: 0.98rem;
   overflow-wrap: anywhere;
@@ -574,6 +638,24 @@ a:hover {
 .repo-meta {
   flex-direction: column;
   align-items: flex-end;
+}
+
+.repo-icon {
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: -0.1rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--accent);
+}
+
+.repo-name span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Research projects */
