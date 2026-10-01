@@ -770,6 +770,46 @@ figcaption a {
   color: var(--accent-2);
 }
 
+.pubs-wrap {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.pubs-sub {
+  font-size: var(--step-0);
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.pubs-abstracts {
+  font-size: 0.92rem;
+}
+
+.pub-title {
+  min-width: 0;
+}
+
+.pub-plain {
+  color: var(--ink);
+}
+
+.pub-tag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0 0.45rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  vertical-align: 0.12em;
+  white-space: nowrap;
+}
+
 .pubs a {
   text-decoration: none;
 }
@@ -928,7 +968,7 @@ figcaption a {
     grid-template-columns: 3rem minmax(0, 1fr);
   }
 
-  .pubs li a {
+  .pubs li .pub-title {
     grid-column: 2;
   }
 
