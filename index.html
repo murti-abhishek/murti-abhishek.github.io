@@ -46,7 +46,7 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
 
     <figure class="xen" aria-labelledby="xen-caption">
       <div class="xen-head">
-        <span class="mono label">Xenium section · simulated</span>
+        <span class="mono label">Hepatoblastoma · Xenium mock-up</span>
         <div class="steps" role="group" aria-label="spatialzones step">
           <button type="button" data-step="1" aria-pressed="true"><span class="mono">1</span> Cells</button>
           <button type="button" data-step="2" aria-pressed="false"><span class="mono">2</span> Graph</button>
@@ -54,7 +54,7 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
         </div>
       </div>
       <div class="xen-stage">
-        <canvas id="xen-canvas" role="img" aria-label="Simulated single-cell spatial map of a liver tumor section. Cells are colored by type, linked into a neighbor graph, then labeled inside, interface, or outside the tumor region."></canvas>
+        <canvas id="xen-canvas" role="img" aria-label="Mock-up of a single-cell spatial map of a hepatoblastoma section. Cells are colored by type, linked into a neighbor graph, then labeled inside, interface, or outside the tumor region."></canvas>
       </div>
       <ul class="legend mono" id="xen-legend" aria-live="polite"></ul>
       <div class="xen-foot">
@@ -62,9 +62,10 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
         <div class="scale mono" aria-hidden="true"><span class="scale-bar"></span><span>100 µm</span></div>
       </div>
       <figcaption id="xen-caption">
-        How <a href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener">spatialzones</a> maps tumor regions:
-        segmented cells and their type annotations go in, a neighbor graph connects them, and tumor cells seed
-        regions that grow hop by hop into inside, interface (within 2 hops), and outside.
+        A mock-up of a hepatoblastoma Xenium section, run through
+        <a href="https://github.com/murti-abhishek/spatialzones" target="_blank" rel="noopener">spatialzones</a>:
+        annotated cells are linked into a neighbor graph, tumor nests seed regions, and every cell is labeled
+        inside, interface (one hop out), or outside.
       </figcaption>
     </figure>
   </section>
@@ -135,7 +136,7 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
     <div class="projects">
       <article>
         <h3>Hepatoblastoma tumor atlas</h3>
-        <p>Single-cell, single-nuclei, and Xenium spatial atlases of pediatric liver cancer, mapping transcriptional heterogeneity and subtype-specific programs. Tumor-region assignment and DNA/RNA integration feed into subtype calls.</p>
+        <p>Single-cell, single-nuclei, and Xenium spatial atlases of pediatric liver cancer, with about 1.8M cells profiled in situ across 17 patients, mapping transcriptional heterogeneity and subtype-specific programs. Tumor-region assignment and DNA/RNA integration feed into subtype calls.</p>
         <p class="tags mono"><span>snRNA-seq</span><span>Xenium</span><span>Multi-omics</span></p>
       </article>
       <article>
@@ -153,6 +154,11 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
     </div>
     <ol class="pubs">
       <li>
+        <span class="pub-year mono">2026</span>
+        <span class="pub-venue">Cell</span>
+        <a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00937-2" target="_blank" rel="noopener">Tabula Sapiens 2.0: a comprehensive transcriptomic atlas of human cell types</a>
+      </li>
+      <li>
         <span class="pub-year mono">2025</span>
         <span class="pub-venue">Nature Biotechnology</span>
         <a href="https://doi.org/10.1038/s41587-024-02523-6" target="_blank" rel="noopener">AAV capsid prioritization in human livers</a>
@@ -163,11 +169,6 @@ description: Computational biologist at UCSF building single-cell, spatial, and 
         <a href="https://doi.org/10.1038/s41467-025-64511-x" target="_blank" rel="noopener">Benchmarking cell type and gene set annotation with AnnDictionary</a>
       </li>
       <li>
-        <span class="pub-year mono">2024</span>
-        <span class="pub-venue">bioRxiv</span>
-        <a href="https://doi.org/10.1101/2024.12.03.626516" target="_blank" rel="noopener">Tabula Sapiens: transcription factors, senescence, and sex-specific features across 28 organs</a>
-      </li>
-      <li class="repeat">
         <span class="pub-year mono">2024</span>
         <span class="pub-venue">bioRxiv</span>
         <a href="https://doi.org/10.1101/2024.08.15.607661" target="_blank" rel="noopener">Perinatal liver inflammation, CXCL10, and myeloid progenitors</a>

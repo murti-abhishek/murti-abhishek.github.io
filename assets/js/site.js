@@ -43,18 +43,21 @@
   const ctx = canvas.getContext("2d");
 
   const CELL_UM = 12;      // typical center-to-center distance between segmented liver cells
-  const TARGET_CELLS = 54; // cells across the stage width
+  const TARGET_CELLS = 88; // cells across the stage width
 
   const TYPES = [
-    { key: "tumor", name: "Tumor", token: "--accent" },
-    { key: "hep", name: "Hepatocyte", token: "--c-hep" },
-    { key: "stroma", name: "Stromal", token: "--c-stroma" },
-    { key: "immune", name: "Immune", token: "--c-immune" },
+    { key: "tumor", name: "Tumor", token: "--c-tumor" },
+    { key: "fibro", name: "Fibroblast", token: "--c-fibro" },
+    { key: "myeloid", name: "Myeloid", token: "--c-myeloid" },
     { key: "endo", name: "Endothelial", token: "--c-endo" },
+    { key: "lymph", name: "Lymphocyte", token: "--c-lymph" },
+    { key: "hep", name: "Hepatocyte", token: "--c-hep" },
+    { key: "bec", name: "BEC", token: "--c-bec" },
+    { key: "vsmc", name: "VSMC", token: "--c-vsmc" },
   ];
   const REGIONS = [
     { key: "inside", name: "Inside", token: "--accent" },
-    { key: "interface", name: "Interface (≤2 hops)", token: "--r-interface" },
+    { key: "interface", name: "Interface (1 hop)", token: "--r-interface" },
     { key: "outside", name: "Outside", token: "--r-outside" },
   ];
 
@@ -94,29 +97,59 @@
     palette.dark = effectiveTheme() === "dark";
   }
 
+  // Section outline traced from a hepatoblastoma Xenium slide (slide pixel coordinates)
+  const OUTLINE = [
+    [968, 355], [1000, 318], [1040, 272], [1090, 228], [1150, 195], [1220, 175], [1290, 170], [1360, 180],
+    [1425, 210], [1485, 262], [1530, 320], [1555, 385], [1562, 450], [1550, 510], [1525, 555], [1490, 585],
+    [1445, 610], [1412, 616], [1402, 602], [1432, 578], [1462, 552], [1428, 562], [1380, 578], [1330, 602],
+    [1296, 642], [1282, 700], [1268, 750], [1230, 762], [1190, 740], [1150, 702], [1095, 690], [1040, 668],
+    [1000, 640], [970, 600], [955, 550], [958, 505], [985, 472], [1003, 458], [975, 442], [955, 410], [952, 380],
+  ];
+  const BOX = { x: 940, y: 160, w: 630, h: 610 };
+  const VESSEL = { x: 992, y: 410, rIn: 13, rOut: 33 };
+  // Tumor nests: dense in the upper right, a few large ones lower left [x, y, r]
+  const NESTS = [
+    [1250, 215, 26], [1180, 245, 18], [1305, 262, 22], [1385, 250, 30], [1455, 305, 26], [1505, 370, 20],
+    [1420, 372, 30], [1338, 342, 20], [1258, 332, 16], [1515, 445, 22], [1448, 455, 28], [1378, 432, 18],
+    [1490, 522, 18], [1195, 462, 32], [1300, 488, 16], [1118, 255, 13], [1062, 335, 12], [1005, 565, 32],
+    [1160, 382, 13], [1352, 522, 13], [1225, 560, 11], [1100, 600, 10],
+  ];
+
+  function inPolygon(x, y, poly) {
+    let inside = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      const [xi, yi] = poly[i], [xj, yj] = poly[j];
+      if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+    }
+    return inside;
+  }
+
   function build() {
     seed = 7;
     s = W / TARGET_CELLS;
 
-    // Tissue outline: an irregular section with a vessel lumen cut out
-    const cx = W * 0.5, cy = H * 0.52, R = Math.min(W * 0.35, H * 0.43);
-    const vessel = [cx - 0.62 * R, cy - 0.42 * R, s * 2.4];
-    const inTissue = (x, y) => {
-      const a = Math.atan2(y - cy, (x - cx) * 0.82);
-      const r = R * (1 + 0.07 * Math.sin(3 * a + 0.7) + 0.05 * Math.sin(5 * a + 2.4) + 0.03 * Math.sin(9 * a + 1));
-      if (Math.hypot(x - vessel[0], y - vessel[1]) < vessel[2]) return false;
-      return Math.hypot((x - cx) * 0.82, y - cy) < r;
+    // Fit the traced section into the stage
+    const k = Math.min(W / (BOX.w * 1.02), H / (BOX.h * 1.02));
+    const ox = (W - BOX.w * k) / 2 - BOX.x * k;
+    const oy = (H - BOX.h * k) / 2 - BOX.y * k;
+    const toSlide = (x, y) => [(x - ox) / k, (y - oy) / k];
+    const norm = (sx, sy) => [(sx - BOX.x) / BOX.w, (sy - BOX.y) / BOX.h];
+
+    const kind = (x, y) => {
+      const [sx, sy] = toSlide(x, y);
+      const dv = Math.hypot(sx - VESSEL.x, sy - VESSEL.y);
+      if (dv < VESSEL.rIn) return 0;          // lumen
+      if (dv < VESSEL.rOut) return 2;         // vessel wall
+      return inPolygon(sx, sy, OUTLINE) ? 1 : 0;
     };
 
-    // Tumor nests (subtype-like regions of different sizes)
-    const nests = [
-      [-0.3, -0.08, 0.44], [0.45, 0.28, 0.3], [0.28, -0.52, 0.16], [-0.42, 0.62, 0.13], [0.8, -0.2, 0.1],
-    ].map(([dx, dy, r]) => [cx + dx * R, cy + dy * R, r * R]);
     const field = (x, y) => {
+      const [sx, sy] = toSlide(x, y);
+      const wx = sx + 6 * Math.sin(sy / 17), wy = sy + 6 * Math.cos(sx / 15);
       let f = 0;
-      for (const [nx, ny, nr] of nests) {
-        const wx = x + s * 1.6 * Math.sin(y / (s * 3.1)), wy = y + s * 1.6 * Math.cos(x / (s * 2.7));
-        f = Math.max(f, Math.exp(-((wx - nx) ** 2 + (wy - ny) ** 2) / (nr * nr)));
+      for (const [nx, ny, nr] of NESTS) {
+        const r = nr * 1.35;
+        f = Math.max(f, Math.exp(-((wx - nx) ** 2 + (wy - ny) ** 2) / (r * r)));
       }
       return f;
     };
@@ -130,31 +163,43 @@
         const px = x + (rand() - 0.5) * s * 0.55;
         const py = y + (rand() - 0.5) * s * 0.55;
         pts.push(px, py);
-        meta.push(inTissue(px, py));
+        let m = kind(px, py);
+        if (m === 1) {
+          const [u, v] = norm(...toSlide(px, py));
+          const sparse = v > 0.45 && u < 0.62 ? 0.17 : 0.04; // looser tissue lower left
+          if (rand() < sparse) m = 0;
+        }
+        meta.push(m);
       }
     }
 
     delaunay = new window.d3.Delaunay(Float64Array.from(pts));
     const voronoi = delaunay.voronoi([-s, -s, W + s, H + s]);
 
+    const pick = (table) => {
+      let v = rand();
+      for (const [key, p] of table) { if ((v -= p) < 0) return key; }
+      return table[table.length - 1][0];
+    };
+    const LOOSE = [["myeloid", 0.3], ["endo", 0.2], ["lymph", 0.14], ["fibro", 0.16], ["hep", 0.1], ["bec", 0.1]];
+
     cells = [];
     pointIndexToCell = new Array(meta.length).fill(-1);
     for (let i = 0; i < meta.length; i++) {
       if (!meta[i]) continue;
       const x = pts[2 * i], y = pts[2 * i + 1];
-      const f = field(x, y);
-      const u = rand();
       let type;
-      if (u < sigmoid((f - 0.42) * 14) * 0.93) type = "tumor";
-      else {
-        const v = rand();
-        const capsule = f > 0.18 && f < 0.45; // fibrous rim around nests
-        if (capsule && v < 0.45) type = "stroma";
-        else if (v < 0.62) type = "hep";
-        else if (v < 0.76) type = "stroma";
-        else if (v < 0.9) type = "immune";
-        else type = "endo";
-        if (f > 0.5 && type === "hep") type = rand() < 0.6 ? "immune" : "stroma"; // infiltrate inside nests
+      if (meta[i] === 2) {
+        type = rand() < 0.75 ? "vsmc" : "endo";
+      } else {
+        const f = field(x, y);
+        const [u, v] = norm(...toSlide(x, y));
+        const lowerLeft = v > 0.45 && u < 0.62;
+        const stromaW = sigmoid((0.5 - v) * 9 + (u - 0.3) * 6); // fibroblast-rich upper right
+        if (rand() < sigmoid((f - 0.42) * 14) * 0.95 || rand() < (lowerLeft ? 0.3 : 0.12)) type = "tumor";
+        else if (f > 0.14 && rand() < 0.65) type = "fibro"; // fibrous rim around nests
+        else if (rand() < stromaW * 0.65) type = "fibro";
+        else type = pick(LOOSE);
       }
       const poly = voronoi.cellPolygon(i);
       if (!poly) continue;
@@ -180,7 +225,7 @@
 
     assignRegions();
 
-    const cx0 = W * 0.4, cy0 = H * 0.5;
+    const cx0 = W * 0.6, cy0 = H * 0.35;
     const maxD = Math.hypot(W, H);
     for (const c of cells) c.order = Math.hypot(c.x - cx0, c.y - cy0) / maxD;
     figure.style.setProperty("--scale-px", `${((100 / CELL_UM) * s).toFixed(1)}px`);
@@ -210,7 +255,7 @@
 
     // BFS outward from the region
     let frontier = cells.map((c, idx) => (inside[idx] ? idx : -1)).filter((v) => v >= 0);
-    for (let hop = 1; hop <= 2; hop++) {
+    for (let hop = 1; hop <= 1; hop++) {
       const next = [];
       for (const idx of frontier) {
         for (const k of cells[idx].nb) {
@@ -222,7 +267,7 @@
       }
       frontier = next;
     }
-    for (const c of cells) if (c.hop === Infinity) { c.region = "outside"; c.wave = 4; }
+    for (const c of cells) if (c.hop === Infinity) { c.region = "outside"; c.wave = 3; }
 
     counts = { inside: 0, interface: 0, outside: 0 };
     for (const c of cells) counts[c.region]++;
@@ -338,7 +383,7 @@
     step = n;
     for (const b of stepButtons) b.setAttribute("aria-pressed", String(Number(b.dataset.step) === n));
     graphTarget = n === 2 ? 1 : 0;
-    rpTarget = n === 3 ? 5 : 0;
+    rpTarget = n === 3 ? 4 : 0;
     renderLegend();
     schedule();
   }
@@ -351,7 +396,7 @@
     let where = c.region;
     if (c.relabel) where = "interface · relabeled from inside";
     else if (c.region === "interface") where = `interface · hop ${c.hop}`;
-    else if (c.region === "outside") where = "outside · more than 2 hops";
+    else if (c.region === "outside") where = "outside · more than 1 hop";
     return `${id} · ${type} · ${where}`;
   }
 

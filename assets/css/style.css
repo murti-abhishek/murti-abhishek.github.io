@@ -11,10 +11,14 @@
   --accent: #b8306a;      /* eosin */
   --accent-ink: #ffffff;
   --accent-2: #3d4aa8;    /* hematoxylin */
-  --c-hep: #d9cde3;
-  --c-stroma: #6f9f97;
-  --c-immune: #d9962e;
-  --c-endo: #4f63c2;
+  --c-tumor: #1e1a3a;
+  --c-fibro: #d06bd3;
+  --c-myeloid: #b3c92c;
+  --c-endo: #3f8f3a;
+  --c-lymph: #1f5f5c;
+  --c-hep: #c0392b;
+  --c-bec: #3b7fd9;
+  --c-vsmc: #6d1f7a;
   --r-interface: #e08a2e;
   --r-outside: #c3cbe8;
   --nucleus: #2a2450;
@@ -49,10 +53,14 @@
     --accent: #ff6aa9;
     --accent-ink: #12040b;
     --accent-2: #7d93ff;
-    --c-hep: #2f2c45;
-    --c-stroma: #4fa596;
-    --c-immune: #f0b450;
-    --c-endo: #7d93ff;
+    --c-tumor: #e7e9f2;
+    --c-fibro: #e486e6;
+    --c-myeloid: #cde04a;
+    --c-endo: #5cbf5a;
+    --c-lymph: #45a6a2;
+    --c-hep: #ee6452;
+    --c-bec: #6aa5ff;
+    --c-vsmc: #b45fcb;
     --r-interface: #f2a03f;
     --r-outside: #27315a;
     --nucleus: #e7e9f2;
@@ -73,10 +81,14 @@
   --accent: #ff6aa9;
   --accent-ink: #12040b;
   --accent-2: #7d93ff;
-  --c-hep: #2f2c45;
-  --c-stroma: #4fa596;
-  --c-immune: #f0b450;
-  --c-endo: #7d93ff;
+  --c-tumor: #e7e9f2;
+  --c-fibro: #e486e6;
+  --c-myeloid: #cde04a;
+  --c-endo: #5cbf5a;
+  --c-lymph: #45a6a2;
+  --c-hep: #ee6452;
+  --c-bec: #6aa5ff;
+  --c-vsmc: #b45fcb;
   --r-interface: #f2a03f;
   --r-outside: #27315a;
   --nucleus: #e7e9f2;
